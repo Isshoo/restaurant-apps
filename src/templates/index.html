@@ -2,7 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Restaurant Apps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Space</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -11,15 +19,74 @@
     />
   </head>
   <body>
-    <h1>Restaurant Apps Starter Project</h1>
-    <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-    <p>
-      Jangan lupa untuk menggunakan salah satu gambar yang berada pada
-      ./images/heros sebagai background hero elemen.
-    </p>
-    <img src="./images/heros/hero-image_1.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_4.jpg" width="450" alt="" />
+    <header>
+      <a href="" class="title">Love<span>Mom</span> </a>
+
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Favorite</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/Isshoo" class="nav-link">About Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-extra">
+        <form class="search-bar">
+          <input type="text" id="search" placeholder="Search" class="search" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="user-account">
+          <img
+            src="./images/heros/hero-image_1.jpg"
+            alt="User Profile"
+            class="profilepic"
+          />
+          <span>Isshoo</span>
+        </div>
+        <!-- toggle button -->
+        <button class="nav-toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="Home" class="home">
+        <div class="home-container">
+          <div class="home-content">
+            <h1>Find <span>Your Mom's</span> favorite restaurant!</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
+              eleifend est. Sed in gravida purus. Donec ac tristique metus.
+              Donec commodo, nisi sed mollis fermentum, justo ligula fringilla
+              nisi, ac consectetur purus velit in est. Nulla facilisi. In
+              pellentesque
+            </p>
+            <a href="#trending"
+              >Find More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="home-link">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </section>
+      <section id="trending" class="trending">
+        <div class="content container"></div>
+      </section>
+      <section id="movies"></section>
+      <section id="anime"></section>
+      <section id="tvshows"></section>
+    </main>
+
+    <footer></footer>
   </body>
 </html>
