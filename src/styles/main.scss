@@ -120,10 +120,9 @@ html {
               flex-direction: column;
               background-color: rgba(0, 0, 0, 0.827);
               transition: top 0.4s;
-              padding: 9rem 0 4rem;
+              padding: 8rem 0 4rem;
               z-index: 999;
-              margin: 0;
-              gap: 3rem;
+              gap: 2rem;
               border-radius: 2rem;
 
               &.active {
@@ -169,26 +168,31 @@ html {
             z-index: 999;
 
             .user-account {
-              display: flex;
-              align-items: center;
               cursor: pointer;
-              flex-direction: column;
-              min-height: 44px;
-              min-width: 44px;
 
-              img {
-                width: 2rem;
-                height: 2rem;
-                border-radius: 100%;
-                object-fit: cover;
-              }
+              a {
+                min-height: 44px;
+                min-width: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0.1rem;
+                figure {
+                  img {
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 100%;
+                    object-fit: cover;
+                  }
+                }
 
-              span {
-                font-size: 0.75rem;
-                margin-top: 0.1rem;
+                figcaption {
+                  font-size: 0.8rem;
 
-                &:hover {
-                  color: $red;
+                  &:hover {
+                    color: $red;
+                  }
                 }
               }
             }
