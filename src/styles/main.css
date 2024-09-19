@@ -363,7 +363,7 @@ header {
   gap: 2rem;
 }
 .home-link li {
-  margin: 1rem 8% 1rem 0;
+  margin: 1rem 8% 2rem 0;
 }
 .home-link li a {
   font-size: var(--h1-font-size);
@@ -381,6 +381,36 @@ header {
 }
 
 /* Home section */
+
+/* main  */
+
+/* footer */
+
+footer {
+  background-color: var(--container-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerbar {
+  padding-block: 1rem;
+}
+
+.footerbar p {
+  color: var(--text-color);
+  font-size: var(--h3-font-size);
+}
+.footerbar p a {
+  text-decoration: none;
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+.footerbar p a:hover {
+  color: var(--yellow);
+}
+/* footer */
 
 /* RESPONSIVE */
 
