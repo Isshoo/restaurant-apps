@@ -3,7 +3,7 @@ import "../styles/main.scss";
 import "./components/footer-bar.js";
 import "./components/header-bar.js";
 import "./components/hero-section.js";
-import "./components/restaurant.js";
+import "./components/resto-item.js";
 import { home } from "./view/home.js";
 
 // === Show Menu === //
