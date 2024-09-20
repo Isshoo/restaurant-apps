@@ -20,77 +20,16 @@
   </head>
   <body>
     <header>
-      <div class="navbar-con">
-        <div class="navbar">
-          <div class="nav-title">
-            <a href="" class="title">Eat<span>Cuy</span> </a>
-          </div>
-          <nav>
-            <ul class="nav-list" id="nav-list">
-              <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Favorite</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://github.com/Isshoo" class="nav-link"
-                  >About Us</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <div class="nav-extra">
-            <div class="user-account">
-              <a href="">
-                <figure>
-                  <img
-                    src="./images/heros/hero-image_1.jpg"
-                    alt="Profile user"
-                    class="profilepic"
-                  />
-                </figure>
-                <figcaption>Isshoo</figcaption>
-              </a>
-            </div>
-            <!-- toggle button -->
-            <button class="nav-toggle" id="nav-toggle">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+      <header-bar></header-bar>
     </header>
 
     <main>
-      <section id="home">
-        <div class="home-container">
-          <div class="home-content">
-            <h1>Find <span>Your Mom's</span> favorite restaurant!</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
-              eleifend est. Sed in gravida purus. Donec ac tristique metus.
-              Donec commodo, nisi sed mollis fermentum, justo ligula fringilla
-            </p>
-            <a href="#explore"
-              >Find Now <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-      </section>
+      <section id="home"><hero-section></hero-section></section>
       <section id="explore">
-        <div class="explore-con">
-          
-        </div>
+        <div class="explore-con"></div>
       </section>
     </main>
 
-    <footer>
-      <div class="footerbar">
-        <p>
-          Copyright &copy; 2024 <a href="https://github.com/Isshoo">Isshoo</a>.
-          - IsiPuru
-        </p>
-      </div>
-    </footer>
+    <footer><footer-bar></footer-bar></footer>
   </body>
 </html>
