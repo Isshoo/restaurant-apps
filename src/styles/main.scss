@@ -372,7 +372,7 @@ main {
         flex-direction: column;
 
         gap: 1rem;
-        column-gap: 3rem;
+        column-gap: 4rem;
         width: 100%;
 
         #searchForm {
@@ -412,48 +412,38 @@ main {
 
         .explore-buttons {
           display: flex;
+          gap: 1rem;
           width: 100%;
 
-          #all-List {
-            position: relative;
+          .filter-btn {
+            background-color: $black;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
             width: 100%;
+            min-height: 44px;
+            min-width: 44px;
+            padding-inline: 1rem;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 3, 0.5);
+            transition: ease-in-out 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             span {
-              position: absolute;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              background-color: $black;
-              top: 0;
-              right: 0;
-              width: 44px;
-              height: 44px;
-              pointer-events: none;
-              border-radius: 3px;
-
-              border-radius: 5px;
-              i {
-                color: $red;
-              }
+              display: none;
             }
-            select {
-              background-color: $black;
-              color: white;
-              border: none;
-              outline: none;
-              cursor: pointer;
-              width: 100%;
-              min-height: 44px;
-              min-width: 44px;
-              padding-inline: 1rem 1rem;
-              border-radius: 5px;
 
-              option {
-                &:hover {
-                  background-color: $red;
-                  color: $black;
-                }
-              }
+            &:hover {
+              background-color: red;
+              box-shadow: 1px 1px 3px rgba(0, 0, 3, 0.568);
+              transition: ease-in-out 0.3s;
             }
+          }
+
+          #all-List {
           }
         }
       }
@@ -596,7 +586,28 @@ footer {
 
 /* RESPONSIVE */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 430px) {
+  main {
+    #explore {
+      .explore-con {
+        .explore-menu {
+          .explore-buttons {
+            .filter-btn {
+              span {
+                display: inline-block;
+              }
+              i {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
   main {
     #explore {
       .explore-con {
@@ -607,6 +618,14 @@ footer {
           }
           .explore-buttons {
             max-width: 8rem;
+            .filter-btn {
+              span {
+                display: none;
+              }
+              i {
+                display: inline-block;
+              }
+            }
           }
         }
       }
@@ -635,6 +654,23 @@ footer {
     #explore {
       .explore-con {
         padding: 0 5%;
+        .explore-menu {
+          flex-direction: row-reverse;
+          #searchForm {
+            max-width: 20rem;
+          }
+          .explore-buttons {
+            max-width: 19rem;
+            .filter-btn {
+              span {
+                display: inline-block;
+              }
+              i {
+                display: none;
+              }
+            }
+          }
+        }
       }
     }
   }
