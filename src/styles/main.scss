@@ -345,99 +345,103 @@ html {
           align-items: center;
           gap: 2rem;
 
-          .explore-menu {
+          .explore-title {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h2 {
+              font-size: 1.75rem;
+              line-height: 1.2;
+              text-shadow: 1px 1px 3px rgba(0, 0, 3, 0.5);
+              text-align: center;
+
+              span {
+                color: $yellow;
+              }
+            }
+          }
+
+          .explore-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 1rem;
+            width: 100%;
 
             #searchForm {
               display: flex;
               gap: 0.5rem;
-              justify-content: end;
+              justify-content: space-between;
+              position: relative;
+              width: 100%;
 
               #searchInput {
                 min-height: 44px;
                 min-width: 44px;
-                padding: 0.5rem 1.5rem;
-                border-radius: 1rem;
+                padding: 0.5rem 2.5rem 0.5rem 1.25rem;
+                border-radius: 0.8rem;
                 flex: 1;
                 background-color: transparent;
                 color: #f0f1f5;
                 border: 1px solid #f0f1f5;
+                width: 100%;
               }
 
               #searchSubmit {
                 min-height: 44px;
                 min-width: 44px;
                 padding: 0.8rem 0.8rem;
-                border-radius: 100%;
                 cursor: pointer;
-                background-color: $black;
-                i {
-                  color: $red;
-                }
+                background-color: transparent;
+                position: absolute;
+                top: 0;
+                right: 0;
 
                 &:hover {
-                  background-color: $red;
-
                   i {
-                    color: #ffffff;
+                    color: $red;
                   }
-                }
-
-                &:active {
-                  background-color: white;
                 }
               }
             }
 
             .explore-buttons {
               display: flex;
-              gap: 1rem;
-
-              .filter-btn {
-                display: flex;
-                align-items: center;
-                position: relative;
-                min-height: 44px;
-                min-width: 44px;
-                justify-content: center;
-                border: 1px solid white;
-                border-radius: 10px;
-                width: 100%;
-                padding-inline: 0.5rem;
-              }
 
               #all-List {
-                flex: 1.4;
+                position: relative;
+                width: 100%;
+                span {
+                  position: absolute;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: $red;
+                  top: 0;
+                  right: 0;
+                  width: 44px;
+                  height: 44px;
+                  pointer-events: none;
+                  border-radius: 3px;
+                }
                 select {
-                  background-color: transparent;
+                  background-color: $black;
                   color: white;
                   border: none;
                   outline: none;
                   cursor: pointer;
-                  min-height: 44px;
-                  min-width: 44px;
-                  width: 100%;
-                }
-              }
-
-              #ratingSelect {
-                flex: 2;
-                select {
-                  background-color: transparent;
-                  color: white;
-                  border: none;
-                  outline: none;
-                  cursor: pointer;
                   width: 100%;
                   min-height: 44px;
                   min-width: 44px;
-                }
-              }
+                  padding-inline: 1rem 4rem;
+                  border-radius: 3px;
 
-              #cityBtn {
-                flex: 1.2;
+                  option {
+                    &:hover {
+                      background-color: $red;
+                      color: $black;
+                    }
+                  }
+                }
               }
             }
           }
@@ -473,6 +477,9 @@ html {
 }
 
 /* RESPONSIVE */
+
+@media screen and (min-width: 480px) {
+}
 
 @media screen and (min-width: 768px) {
   /* Navbar */
