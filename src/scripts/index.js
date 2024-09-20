@@ -4,9 +4,10 @@ import "./components/footer-bar.js";
 import "./components/header-bar.js";
 import "./components/hero-section.js";
 import "./components/resto-item.js";
-import { home } from "./view/home.js";
+import { home, ambilDataResto } from "./view/home.js";
 
 // === Show Menu === //
 document.addEventListener("DOMContentLoaded", function (e) {
+  ambilDataResto();
   home();
 });

@@ -14,6 +14,7 @@ $black: rgb(23, 27, 30);
 
   &:focus {
     outline: 1px solid blue;
+    background-color: transparent;
   }
 }
 
@@ -460,6 +461,7 @@ main {
       #resto-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
         gap: 1.5rem;
 
         .resto-card {
@@ -468,18 +470,20 @@ main {
           flex-direction: column;
           border-radius: 10px;
           background-color: $black;
-          justify-content: center;
+          justify-content: start;
           align-items: center;
           transition: transform 0.5s ease-in-out;
           overflow: hidden;
+          height: 100%;
 
           .resto-img {
             box-sizing: border-box;
             position: relative;
+            width: 100%;
 
             img {
               width: 100%;
-              height: 100%;
+              height: 13rem;
               object-fit: cover;
               object-position: center;
               transition: transform 0.5s ease;
@@ -494,7 +498,7 @@ main {
           .resto-info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: start;
             gap: 0.3rem;
             margin: 0 1.6rem 1rem;
@@ -502,6 +506,7 @@ main {
 
             position: relative;
             border-bottom: 1px solid $red;
+            height: 100%;
 
             span {
               position: absolute;
