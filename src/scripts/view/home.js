@@ -1,13 +1,13 @@
 import RestoApi from "../datas/resto-api.js";
 import Utils from "../utility/utils.js";
 
-const ambilData = async () => {
-  const data = await RestoApi.getResto();
-  return data;
+const ambilDataResto = async () => {
+  const dataResto = await RestoApi.getResto();
+  return dataResto;
 };
 
 const home = () => {
-  ambilData();
+  ambilDataResto();
 
   //NAVBAR
 
