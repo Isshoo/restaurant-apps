@@ -16,7 +16,7 @@ class FooterBar extends HTMLElement {
        <div class="footerbar">
         <p>
           Copyright &copy; 2024 <a href="https://github.com/Isshoo">Isshoo</a>.
-          - IsiPuru
+          - <em>Eat<span>Cuy</span></em>
         </p>
       </div>
       `;

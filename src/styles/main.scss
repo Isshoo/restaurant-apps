@@ -229,7 +229,6 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 4rem;
   /* Home section */
 
   #home {
@@ -237,7 +236,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 724px;
+    min-height: 728px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,10 +333,11 @@ main {
   /* Home section */
 
   #explore {
-    min-height: 724px;
+    min-height: 728px;
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-block: 6rem;
 
     .explore-con {
       width: 100%;
@@ -482,11 +482,11 @@ main {
               height: 100%;
               object-fit: cover;
               object-position: center;
-              transition: transform 0.5s ease-in-out;
+              transition: transform 0.5s ease;
 
               &:hover {
                 transform: scale(1.05);
-                transition: transform 0.5s ease-in-out;
+                transition: transform 0.5s ease;
               }
             }
           }
@@ -517,7 +517,7 @@ main {
             }
 
             h3 {
-              font-size: 1.2em;
+              font-size: 1.2rem;
               font-weight: 700;
               color: white;
               line-height: 1.2;
@@ -527,7 +527,7 @@ main {
               border-bottom: 1px solid $yellow;
             }
             p {
-              font-size: 0.85em;
+              font-size: 0.9rem;
               color: whitesmoke;
               line-height: 1.4;
               text-align: justify;
@@ -578,6 +578,10 @@ footer {
         &:hover {
           color: $yellow;
         }
+      }
+
+      span {
+        color: $red;
       }
     }
   }
