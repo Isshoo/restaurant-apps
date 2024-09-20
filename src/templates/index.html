@@ -26,7 +26,37 @@
     <main>
       <section id="home"><hero-section></hero-section></section>
       <section id="explore">
-        <div class="explore-con"></div>
+        <div class="explore-con">
+          <div class="explore-title"><h2>Explore Restaurant</h2></div>
+          <div class="explore-menu">
+            <form id="searchForm">
+              <input type="text" id="searchInput" placeholder="Cari Notes" />
+              <button type="submit" id="searchSubmit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <div class="explore-buttons">
+              <div id="all-List" class="filter-btn">
+                <select name="nameFilter" id="nameFilter">
+                  <option value="All">All</option>
+                  <option value="A to Z">A to Z</option>
+                  <option value="Z to A">Z to A</option>
+                </select>
+              </div>
+              <div id="ratingSelect" class="filter-btn">
+                <select name="ratingFilter" id="ratingFilter">
+                  <option value="By Rating">By Rating</option>
+                  <option value="Highest">Highest</option>
+                  <option value="Lowest">Lowestt</option>
+                </select>
+              </div>
+              <button id="cityBtn" class="filter-btn">
+                <span>By City</span>
+              </button>
+            </div>
+          </div>
+          <div>explore list</div>
+        </div>
       </section>
     </main>
 
