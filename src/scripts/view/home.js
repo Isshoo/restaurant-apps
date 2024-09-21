@@ -119,6 +119,7 @@ const home = () => {
     const cariResto = async () => {
       const response = await RestoApi.getResto(namaResto);
       const hasil = response.filter((resto) => resto.name.toLowerCase().includes(namaResto));
+
       render(hasil);
     };
 
