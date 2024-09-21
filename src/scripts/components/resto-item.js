@@ -12,14 +12,14 @@ class RestoItem extends HTMLElement {
     super();
   }
 
-  set resto(value) {
+  set restow(value) {
     this._resto = value;
 
     // Render ulang
     this.render();
   }
 
-  get resto() {
+  get restow() {
     return this._resto;
   }
 

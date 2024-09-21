@@ -12,7 +12,7 @@ const restoContainer = document.querySelector("#resto-list");
 const render = (restos) => {
   const restoList = restos.map((resto) => {
     const restoItem = document.createElement("resto-item");
-    restoItem.resto = resto;
+    restoItem.restow = resto;
     return restoItem;
   });
 
