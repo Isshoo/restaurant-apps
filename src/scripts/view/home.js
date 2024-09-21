@@ -19,6 +19,57 @@ const render = (restos) => {
   Utils.emptyElement(restoContainer);
   restoContainer.append(...restoList);
 };
+//RENDER
+
+// FILTER LIST
+const filterList = document.querySelectorAll(".filter-btn");
+const allList = document.getElementById("all-list");
+const ratingList = document.getElementById("by-rating");
+const cityList = document.getElementById("by-city");
+
+allList.addEventListener("click", (e) => {
+  e.preventDefault();
+  filterList.forEach((button) => {
+    button.classList.remove("active");
+  });
+  allList.classList.add("active");
+  ambilDataResto();
+});
+
+ratingList.addEventListener("click", (e) => {
+  e.preventDefault();
+  filterList.forEach((button) => {
+    button.classList.remove("active");
+  });
+  ratingList.classList.add("active");
+
+  const cariResto = async () => {
+    const response = await RestoApi.getResto();
+    const byRating = response.sort((a, b) => b.rating - a.rating);
+
+    render(byRating);
+  };
+
+  cariResto();
+});
+
+cityList.addEventListener("click", (e) => {
+  e.preventDefault();
+  filterList.forEach((button) => {
+    button.classList.remove("active");
+  });
+  cityList.classList.add("active");
+
+  const cariResto = async () => {
+    const response = await RestoApi.getResto();
+    const byCity = response.sort((a, b) => a.city.localeCompare(b.city));
+
+    render(byCity);
+  };
+
+  cariResto();
+});
+// FILTER LIST
 
 const home = () => {
   ambilDataResto();
@@ -41,6 +92,7 @@ const home = () => {
       navList.classList.remove("active");
     }
   });
+  //NAVBAR
 
   //SEARCH
   const searchForm = document.getElementById("searchForm");
@@ -61,6 +113,7 @@ const home = () => {
     cariResto();
     searchForm.reset();
   });
+  //SEARCH
 };
 
 export { home, ambilDataResto };

@@ -400,12 +400,17 @@ main {
             padding: 0.8rem 0.8rem;
             border-radius: 100%;
             cursor: pointer;
-            background-color: #da291cda;
-            top: 0;
-            right: 0;
+            background-color: $red;
+            box-shadow: 1px 1px 3px rgba(0, 0, 3, 0.568);
+            transition: ease-in-out 0.1s;
 
             &:hover {
-              background-color: $red;
+              background-color: red;
+              transition: ease-in-out 0.1s;
+            }
+            &:active {
+              background-color: white;
+              outline: none;
             }
           }
         }
@@ -431,19 +436,23 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0.6;
 
             span {
               display: none;
             }
 
+            &.active {
+              opacity: 1;
+            }
+
             &:hover {
-              background-color: red;
-              box-shadow: 1px 1px 3px rgba(0, 0, 3, 0.568);
+              background-color: $red;
               transition: ease-in-out 0.3s;
             }
-          }
-
-          #all-List {
+            &:active {
+              background-color: red;
+            }
           }
         }
       }
@@ -476,11 +485,11 @@ main {
               height: 13rem;
               object-fit: cover;
               object-position: center;
-              transition: transform 0.5s ease;
+              transition: transform 0.5s ease-in-out;
 
               &:hover {
                 transform: scale(1.05);
-                transition: transform 0.5s ease;
+                transition: transform 0.5s ease-in-out;
               }
             }
           }
