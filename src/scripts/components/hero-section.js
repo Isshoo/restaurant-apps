@@ -1,7 +1,8 @@
 class HeroSection extends HTMLElement {
   emptyContent() {
-    this.innerHTML = "";
+    this.innerHTML = '';
   }
+
   connectedCallback() {
     this.render();
   }
@@ -24,4 +25,4 @@ class HeroSection extends HTMLElement {
   }
 }
 
-customElements.define("hero-section", HeroSection);
+customElements.define('hero-section', HeroSection);

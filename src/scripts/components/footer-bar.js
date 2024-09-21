@@ -1,7 +1,8 @@
 class FooterBar extends HTMLElement {
   emptyContent() {
-    this.innerHTML = "";
+    this.innerHTML = '';
   }
+
   connectedCallback() {
     this.render();
   }
@@ -19,4 +20,4 @@ class FooterBar extends HTMLElement {
   }
 }
 
-customElements.define("footer-bar", FooterBar);
+customElements.define('footer-bar', FooterBar);

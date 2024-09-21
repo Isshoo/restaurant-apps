@@ -23,7 +23,7 @@ class RestoItem extends HTMLElement {
   }
 
   emptyContent() {
-    this.innerHTML = "";
+    this.innerHTML = '';
   }
 
   render() {
@@ -50,4 +50,4 @@ class RestoItem extends HTMLElement {
   }
 }
 
-customElements.define("resto-item", RestoItem);
+customElements.define('resto-item', RestoItem);

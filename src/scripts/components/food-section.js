@@ -1,7 +1,8 @@
 class FoodSection extends HTMLElement {
   emptyContent() {
-    this.innerHTML = "";
+    this.innerHTML = '';
   }
+
   connectedCallback() {
     this.render();
   }
@@ -40,4 +41,4 @@ class FoodSection extends HTMLElement {
   }
 }
 
-customElements.define("food-section", FoodSection);
+customElements.define('food-section', FoodSection);

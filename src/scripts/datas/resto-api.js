@@ -1,4 +1,4 @@
-const endpoint = "./data/DATA.json";
+const endpoint = './data/DATA.json';
 
 class RestoApi {
   static async getResto() {
@@ -10,7 +10,7 @@ class RestoApi {
       console.log(data);
       return data;
     } catch (error) {
-      throw new Error("error fetching");
+      throw new Error('error fetching');
     }
   }
 }

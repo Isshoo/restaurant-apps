@@ -1,7 +1,8 @@
 class ExploreSection extends HTMLElement {
   emptyContent() {
-    this.innerHTML = "";
+    this.innerHTML = '';
   }
+
   connectedCallback() {
     this.render();
   }
@@ -40,4 +41,4 @@ class ExploreSection extends HTMLElement {
   }
 }
 
-customElements.define("explore-section", ExploreSection);
+customElements.define('explore-section', ExploreSection);

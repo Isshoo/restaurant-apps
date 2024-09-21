@@ -1,20 +1,19 @@
-import RestoApi from "../datas/resto-api.js";
-import Utils from "../utility/utils.js";
+import RestoApi from '../datas/resto-api';
 
-//RENDER
-const restoContainer = document.querySelector("#resto-list");
+// RENDER
+const restoContainer = document.querySelector('#resto-list');
 
 const render = (restos) => {
   const restoList = restos.map((resto) => {
-    const restoItem = document.createElement("resto-item");
+    const restoItem = document.createElement('resto-item');
     restoItem.restow = resto;
     return restoItem;
   });
 
-  Utils.emptyElement(restoContainer);
+  restoContainer.innerHTML = '';
   restoContainer.append(...restoList);
 };
-//RENDER
+// RENDER
 
 const ambilDataResto = async () => {
   const dataResto = await RestoApi.getResto();
@@ -22,26 +21,26 @@ const ambilDataResto = async () => {
 };
 
 // FILTER LIST
-const filterList = document.querySelectorAll(".filter-btn");
-const allList = document.getElementById("all-list");
-const ratingList = document.getElementById("by-rating");
-const cityList = document.getElementById("by-city");
+const filterList = document.querySelectorAll('.filter-btn');
+const allList = document.getElementById('all-list');
+const ratingList = document.getElementById('by-rating');
+const cityList = document.getElementById('by-city');
 
-allList.addEventListener("click", (e) => {
+allList.addEventListener('click', (e) => {
   e.preventDefault();
   filterList.forEach((button) => {
-    button.classList.remove("active");
+    button.classList.remove('active');
   });
-  allList.classList.add("active");
+  allList.classList.add('active');
   ambilDataResto();
 });
 
-ratingList.addEventListener("click", (e) => {
+ratingList.addEventListener('click', (e) => {
   e.preventDefault();
   filterList.forEach((button) => {
-    button.classList.remove("active");
+    button.classList.remove('active');
   });
-  ratingList.classList.add("active");
+  ratingList.classList.add('active');
 
   const cariResto = async () => {
     const response = await RestoApi.getResto();
@@ -53,12 +52,12 @@ ratingList.addEventListener("click", (e) => {
   cariResto();
 });
 
-cityList.addEventListener("click", (e) => {
+cityList.addEventListener('click', (e) => {
   e.preventDefault();
   filterList.forEach((button) => {
-    button.classList.remove("active");
+    button.classList.remove('active');
   });
-  cityList.classList.add("active");
+  cityList.classList.add('active');
 
   const cariResto = async () => {
     const response = await RestoApi.getResto();
@@ -74,61 +73,59 @@ cityList.addEventListener("click", (e) => {
 const home = () => {
   ambilDataResto();
 
-  //NAVBAR
-  const navList = document.querySelector(".nav-list");
-  document.querySelector("#nav-toggle").addEventListener("click", () => {
-    navList.classList.toggle("active");
+  // NAVBAR
+  const navList = document.querySelector('.nav-list');
+  document.querySelector('#nav-toggle').addEventListener('click', () => {
+    navList.classList.toggle('active');
   });
 
-  const navLink = document.querySelectorAll(".nav-link");
+  const navLink = document.querySelectorAll('.nav-link');
   const linkAction = () => {
-    navList.classList.remove("active");
+    navList.classList.remove('active');
   };
-  navLink.forEach((n) => n.addEventListener("click", linkAction));
+  navLink.forEach((n) => n.addEventListener('click', linkAction));
 
   const linkFocus = () => {
-    navList.style.top = "-2rem";
+    navList.style.top = '-2rem';
   };
-  navLink.forEach((n) => n.addEventListener("focus", linkFocus));
+  navLink.forEach((n) => n.addEventListener('focus', linkFocus));
 
   const linkBlur = () => {
-    navList.style.top = "";
+    navList.style.top = '';
   };
-  navLink.forEach((n) => n.addEventListener("blur", linkBlur));
+  navLink.forEach((n) => n.addEventListener('blur', linkBlur));
 
-  const navToggle = document.querySelector("#nav-toggle");
-  document.addEventListener("click", function (e) {
+  const navToggle = document.querySelector('#nav-toggle');
+  document.addEventListener('click', (e) => {
     if (!navList.contains(e.target) && !navToggle.contains(e.target)) {
-      navList.classList.remove("active");
+      navList.classList.remove('active');
     }
   });
 
-  navToggle.addEventListener("blur", () => {
-    navList.classList.remove("active");
+  navToggle.addEventListener('blur', () => {
+    navList.classList.remove('active');
   });
 
-  //NAVBAR
+  // NAVBAR
 
-  //SEARCH
-  const searchForm = document.getElementById("searchForm");
+  // SEARCH
+  const searchForm = document.getElementById('searchForm');
 
-  searchForm.addEventListener("submit", (e) => {
+  searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const namaResto = e.target.elements.searchInput.value.toLowerCase();
 
     const cariResto = async () => {
       const response = await RestoApi.getResto(namaResto);
-      const hasil = response.filter((resto) => {
-        return resto.name.toLowerCase().includes(namaResto);
-      });
+      const hasil = response.filter((resto) => resto.name.toLowerCase().includes(namaResto));
       render(hasil);
     };
 
     cariResto();
     searchForm.reset();
   });
-  //SEARCH
+  // SEARCH
 };
 
 export default home;

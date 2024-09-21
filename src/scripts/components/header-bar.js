@@ -1,7 +1,8 @@
 class HeaderBar extends HTMLElement {
   emptyContent() {
-    this.innerHTML = "";
+    this.innerHTML = '';
   }
+
   connectedCallback() {
     this.render();
   }
@@ -52,4 +53,4 @@ class HeaderBar extends HTMLElement {
   }
 }
 
-customElements.define("header-bar", HeaderBar);
+customElements.define('header-bar', HeaderBar);
