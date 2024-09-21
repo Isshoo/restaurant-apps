@@ -8,7 +8,6 @@ import './components/food-section';
 import './components/resto-item';
 import home from './view/home';
 
-// === Show Menu === //
 document.addEventListener('DOMContentLoaded', () => {
   home();
 });
