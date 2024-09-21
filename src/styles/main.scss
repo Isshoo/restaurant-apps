@@ -93,10 +93,9 @@ header {
       margin: 0 8%;
 
       .nav-title {
-        min-height: 44px;
-        min-width: 44px;
         display: flex;
         align-items: center;
+
         z-index: 9999;
         border-radius: 3px;
         border: 1px solid transparent;
@@ -112,6 +111,10 @@ header {
         }
 
         .title {
+          display: flex;
+          align-items: center;
+          min-height: 44px;
+          min-width: 44px;
           font-size: 1.75rem;
           font-weight: bold;
 
