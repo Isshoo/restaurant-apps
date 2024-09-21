@@ -584,7 +584,7 @@ main {
 
     h2 {
       span {
-        text-shadow: -4px 4px 5px $yellow;
+        text-shadow: -4px 4px 5px $red;
       }
     }
   }
@@ -595,7 +595,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     gap: 0.1rem;
-    background-color: #ffd000;
+    background-color: $yellow;
     padding: 0.2rem;
 
     .food-item {
@@ -631,6 +631,8 @@ main {
         bottom: 1rem;
         font-size: 1em;
         display: none;
+        color: white;
+        text-shadow: 1px 1px 3px rgb(0, 0, 0);
       }
     }
   }
@@ -752,7 +754,7 @@ footer {
       .food-content {
         .food-item {
           &:hover {
-            flex: 3;
+            flex: 5;
           }
           h3 {
             display: block;
