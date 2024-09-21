@@ -31,23 +31,18 @@ class Utils {
   }
 
   static emptyElement(element) {
-    element.innerHTML = "";
+    const newElement = { ...element };
+    newElement.innerHTML = "";
   }
   static showElement(element) {
-    element.style.display = "block";
-    element.hidden = false;
+    const newElement = { ...element };
+    newElement.style.display = "block";
+    newElement.hidden = false;
   }
   static hideElement(element) {
-    element.style.display = "none";
-    element.hidden = true;
-  }
-
-  static delay(response = null) {
-    return new Promise((resolve) =>
-      setTimeout(() => {
-        resolve(response);
-      }, 1000)
-    );
+    const newElement = { ...element };
+    newElement.style.display = "none";
+    newElement.hidden = true;
   }
 }
 

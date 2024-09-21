@@ -1,50 +1,49 @@
 class RestoItem extends HTMLElement {
-  _resto = {
-    id: null,
-    name: null,
-    description: null,
-    pictureId: null,
-    city: null,
-    rating: null,
-  };
-
   constructor() {
     super();
+    this.resto = {
+      id: null,
+      name: null,
+      description: null,
+      pictureId: null,
+      city: null,
+      rating: null,
+    };
   }
 
   set restow(value) {
-    this._resto = value;
+    this.resto = value;
 
     // Render ulang
     this.render();
   }
 
   get restow() {
-    return this._resto;
+    return this.resto;
   }
 
-  _emptyContent() {
+  emptyContent() {
     this.innerHTML = "";
   }
 
   render() {
-    this._emptyContent();
+    this.emptyContent();
     this.innerHTML += `
          <article class="resto-card">
               <div class="resto-img">
-                <img src="${this._resto.pictureId}" alt="gambar restaurant ${this._resto.name}" />
+                <img src="${this.resto.pictureId}" alt="gambar restaurant ${this.resto.name}" />
               </div>
 
               <div class="resto-info">
-                <span>${this._resto.city}</span>
-                <h3>${this._resto.name}</h3>
+                <span>${this.resto.city}</span>
+                <h3>${this.resto.name}</h3>
                 <p>
-                ${this._resto.description}
+                ${this.resto.description}
                 </p>
               </div>
               <div class="resto-rate">
                 <i class="fa-solid fa-star"></i>
-                <p>${this._resto.rating}</p>
+                <p>${this.resto.rating}</p>
               </div>
             </article>
         `;

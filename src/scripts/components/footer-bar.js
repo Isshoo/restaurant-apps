@@ -1,9 +1,5 @@
 class FooterBar extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  _emptyContent() {
+  emptyContent() {
     this.innerHTML = "";
   }
   connectedCallback() {
@@ -11,7 +7,7 @@ class FooterBar extends HTMLElement {
   }
 
   render() {
-    this._emptyContent();
+    this.emptyContent();
     this.innerHTML += `
        <div class="footerbar">
         <p>

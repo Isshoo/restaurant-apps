@@ -1,9 +1,5 @@
 class ExploreSection extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  _emptyContent() {
+  emptyContent() {
     this.innerHTML = "";
   }
   connectedCallback() {
@@ -11,7 +7,7 @@ class ExploreSection extends HTMLElement {
   }
 
   render() {
-    this._emptyContent();
+    this.emptyContent();
     this.innerHTML += `
          <div class="explore-con">
           <div class="explore-title">

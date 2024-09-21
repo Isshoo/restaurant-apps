@@ -1,11 +1,6 @@
 import RestoApi from "../datas/resto-api.js";
 import Utils from "../utility/utils.js";
 
-const ambilDataResto = async () => {
-  const dataResto = await RestoApi.getResto();
-  render(dataResto);
-};
-
 //RENDER
 const restoContainer = document.querySelector("#resto-list");
 
@@ -20,6 +15,11 @@ const render = (restos) => {
   restoContainer.append(...restoList);
 };
 //RENDER
+
+const ambilDataResto = async () => {
+  const dataResto = await RestoApi.getResto();
+  render(dataResto);
+};
 
 // FILTER LIST
 const filterList = document.querySelectorAll(".filter-btn");
@@ -131,4 +131,4 @@ const home = () => {
   //SEARCH
 };
 
-export { home };
+export default home;

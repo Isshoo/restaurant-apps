@@ -1,9 +1,5 @@
 class HeroSection extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  _emptyContent() {
+  emptyContent() {
     this.innerHTML = "";
   }
   connectedCallback() {
@@ -11,7 +7,7 @@ class HeroSection extends HTMLElement {
   }
 
   render() {
-    this._emptyContent();
+    this.emptyContent();
     this.innerHTML += `
        <div class="home-container">
           <div class="home-content">

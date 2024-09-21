@@ -1,9 +1,5 @@
 class FoodSection extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  _emptyContent() {
+  emptyContent() {
     this.innerHTML = "";
   }
   connectedCallback() {
@@ -11,7 +7,7 @@ class FoodSection extends HTMLElement {
   }
 
   render() {
-    this._emptyContent();
+    this.emptyContent();
     this.innerHTML += `
     <div class="food-con">
           <div class="food-title">
