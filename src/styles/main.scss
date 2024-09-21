@@ -572,7 +572,7 @@ main {
     }
   }
 
-  #food {
+  .food-con {
     display: flex;
     align-items: center;
     min-height: 728px;
@@ -750,7 +750,7 @@ footer {
       }
     }
 
-    #food {
+    .food-con {
       .food-content {
         .food-item {
           &:hover {
