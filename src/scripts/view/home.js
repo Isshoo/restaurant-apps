@@ -131,4 +131,4 @@ const home = () => {
   //SEARCH
 };
 
-export { home, ambilDataResto };
+export { home };

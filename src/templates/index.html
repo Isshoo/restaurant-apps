@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Family Space</title>
+    <title>Eat Lah Cuy</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -27,37 +27,7 @@
     <main id="maincontent">
       <section id="home"><hero-section></hero-section></section>
       <section id="explore">
-        <div class="explore-con">
-          <div class="explore-title">
-            <h2>Explore <span>Restaurant</span></h2>
-          </div>
-          <div class="explore-menu" id="explore-menu">
-            <form id="searchForm">
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Cari Restaurant"
-              />
-              <button type="submit" id="searchSubmit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-            <div class="explore-buttons">
-              <button id="all-list" class="filter-btn active">All</button>
-              <button id="by-rating" class="filter-btn">
-                <span>By Rating</span> <i class="fa-solid fa-star"></i>
-              </button>
-              <button id="by-city" class="filter-btn">
-                <span>By City</span> <i class="fa-solid fa-city"></i>
-              </button>
-            </div>
-          </div>
-          <div id="resto-list">
-            <resto-item></resto-item>
-            <resto-item></resto-item>
-            <resto-item></resto-item>
-          </div>
-        </div>
+        <explore-section></explore-section>
       </section>
     </main>
 
