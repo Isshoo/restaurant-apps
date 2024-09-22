@@ -73,11 +73,8 @@ cityList.addEventListener('click', (e) => {
 const home = () => {
   ambilDataResto();
 
-  // NAVBAR
+  // NAVBAR (HARUS DIPINDAH KE DRAWER INITIATOR)
   const navList = document.querySelector('.nav-list');
-  document.querySelector('#nav-toggle').addEventListener('click', () => {
-    navList.classList.toggle('active');
-  });
 
   const navLink = document.querySelectorAll('.nav-link');
   const linkAction = () => {
