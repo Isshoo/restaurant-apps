@@ -1,0 +1,112 @@
+/* RESPONSIVE */
+
+@media screen and (min-width: 430px) {
+  main {
+    #explore {
+      .explore-con {
+        .explore-menu {
+          .explore-buttons {
+            .filter-btn {
+              span {
+                display: inline-block;
+              }
+              i {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
+  main {
+    #explore {
+      .explore-con {
+        .explore-menu {
+          flex-direction: row-reverse;
+          #searchForm {
+            max-width: 18rem;
+          }
+          .explore-buttons {
+            max-width: 8rem;
+            .filter-btn {
+              span {
+                display: none;
+              }
+              i {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Navbar */
+
+  #nav-list {
+    position: static;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0;
+    gap: 4rem;
+    text-align: center;
+    flex-direction: row;
+  }
+
+  #nav-toggle {
+    display: none;
+  }
+
+  main {
+    #explore {
+      .explore-con {
+        padding: 0 5%;
+        .explore-menu {
+          flex-direction: row-reverse;
+          #searchForm {
+            max-width: 20rem;
+          }
+          .explore-buttons {
+            max-width: 19rem;
+            .filter-btn {
+              span {
+                display: inline-block;
+              }
+              i {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .food-con {
+      .food-content {
+        .food-item {
+          &:hover {
+            flex: 5;
+          }
+          h3 {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main,
+  .navbar-con,
+  footer {
+    max-width: 1000px;
+  }
+}

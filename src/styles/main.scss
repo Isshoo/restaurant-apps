@@ -162,7 +162,7 @@ header {
             }
 
             &::after {
-              content: "";
+              content: '';
               width: 0;
               height: 2px;
               background-color: $red;
@@ -249,7 +249,7 @@ main {
   /* Home section */
 
   #home {
-    background-image: url("../public/images/heros/hero-image_2.jpg");
+    background-image: url('../public/images/heros/hero-image_2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -261,7 +261,7 @@ main {
     width: 100%;
 
     &::after {
-      content: "";
+      content: '';
 
       position: absolute;
       display: block;
@@ -269,11 +269,7 @@ main {
       right: 0;
       width: 100%;
       height: 17%;
-      background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 1) 40%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 40%, rgba(255, 255, 255, 0) 100%);
     }
 
     .home-container {
@@ -659,118 +655,5 @@ footer {
         color: $red;
       }
     }
-  }
-}
-
-/* RESPONSIVE */
-
-@media screen and (min-width: 430px) {
-  main {
-    #explore {
-      .explore-con {
-        .explore-menu {
-          .explore-buttons {
-            .filter-btn {
-              span {
-                display: inline-block;
-              }
-              i {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 540px) {
-  main {
-    #explore {
-      .explore-con {
-        .explore-menu {
-          flex-direction: row-reverse;
-          #searchForm {
-            max-width: 18rem;
-          }
-          .explore-buttons {
-            max-width: 8rem;
-            .filter-btn {
-              span {
-                display: none;
-              }
-              i {
-                display: inline-block;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  /* Navbar */
-
-  #nav-list {
-    position: static;
-    justify-content: space-between;
-    background-color: transparent;
-    padding: 0;
-    gap: 4rem;
-    text-align: center;
-    flex-direction: row;
-  }
-
-  #nav-toggle {
-    display: none;
-  }
-
-  main {
-    #explore {
-      .explore-con {
-        padding: 0 5%;
-        .explore-menu {
-          flex-direction: row-reverse;
-          #searchForm {
-            max-width: 20rem;
-          }
-          .explore-buttons {
-            max-width: 19rem;
-            .filter-btn {
-              span {
-                display: inline-block;
-              }
-              i {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .food-con {
-      .food-content {
-        .food-item {
-          &:hover {
-            flex: 5;
-          }
-          h3 {
-            display: block;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  main,
-  .navbar-con,
-  footer {
-    max-width: 1000px;
   }
 }
