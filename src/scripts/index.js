@@ -10,14 +10,22 @@ import './components/resto-item';
 import home from './view/home';
 import App from './view/app';
 
-function app() {
-  return new App({
-    button: document.querySelector('#nav-toggle'),
-    drawer: document.querySelector('#nav-list'),
-    content: document.querySelector('#mainContent'),
-  });
-}
+const app = new App({
+  button: document.querySelector('#nav-toggle'),
+  drawer: document.querySelector('#nav-list'),
+  content: document.querySelector('#mainContent'),
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+  home();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+  home();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   home();
-  app();
 });
