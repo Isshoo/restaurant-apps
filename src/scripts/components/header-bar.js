@@ -17,9 +17,9 @@ class HeaderBar extends HTMLElement {
           </div>
           <nav>
             <ul class="nav-list" id="nav-list">
-              <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="#/home" class="nav-link">Home</a></li>
               <li class="nav-item">
-                <a href="#explore" class="nav-link">Favorite</a>
+                <a href="#/favorite" class="nav-link">Favorite</a>
               </li>
               <li class="nav-item">
                 <a href="https://github.com/Isshoo" class="nav-link"

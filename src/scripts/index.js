@@ -7,7 +7,7 @@ import './components/hero-section';
 import './components/explore-section';
 import './components/food-section';
 import './components/resto-item';
-import home from './view/home';
+
 import App from './view/app';
 
 const app = new App({
@@ -18,14 +18,8 @@ const app = new App({
 
 window.addEventListener('hashchange', () => {
   app.renderPage();
-  home();
 });
 
 window.addEventListener('load', () => {
   app.renderPage();
-  home();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  home();
 });
