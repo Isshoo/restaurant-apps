@@ -9,6 +9,7 @@ import './components/food-section';
 import './components/resto-item';
 
 import App from './view/app';
+import swRegister from './utility/sw-register';
 
 const app = new App({
   button: document.querySelector('#nav-toggle'),
@@ -22,4 +23,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
