@@ -531,14 +531,21 @@ main {
             }
 
             h3 {
-              font-size: 1.2rem;
-              font-weight: 700;
-              color: white;
-              line-height: 1.2;
-              display: inline-block;
-              margin-bottom: 0.5rem;
-              padding-block: 0.5rem;
-              border-bottom: 1px solid $yellow;
+              
+
+              a {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: white;
+                line-height: 1.2;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+                padding-block: 0.5rem;
+                border-bottom: 1px solid $yellow;
+                min-width: 44px;
+                min-height: 44px;
+                text-decoration: none;
+              }
             }
             p {
               font-size: 0.95rem;

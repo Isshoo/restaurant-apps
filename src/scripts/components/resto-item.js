@@ -36,7 +36,7 @@ class RestoItem extends HTMLElement {
 
               <div class="resto-info">
                 <span>${this.resto.city}</span>
-                <h3>${this.resto.name}</h3>
+                <h3><a href="/#/detail/${this.resto.id}">${this.resto.name}</a></h3>
                 <p>
                 ${this.resto.description}
                 </p>
