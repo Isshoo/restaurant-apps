@@ -3,7 +3,6 @@ import RestoApi from '../../datas/resto-api';
 const Home = {
   async render() {
     return `
-      
       <section id="home"><hero-section></hero-section></section>
       <section id="explore">
         <explore-section></explore-section>
@@ -11,7 +10,6 @@ const Home = {
       <section id="food">
         <food-section></food-section>
       </section>
-   
     `;
   },
 

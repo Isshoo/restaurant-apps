@@ -7,6 +7,7 @@
     "start-dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "serve": "http-server dist --port 8000",
+    "build-serve": "npm run build && npm run serve",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "lint": "eslint ./src",
@@ -47,6 +48,9 @@
   "dependencies": {
     "idb": "^8.0.0",
     "regenerator-runtime": "^0.14.0",
+    "workbox-precaching": "^7.1.0",
+    "workbox-routing": "^7.1.0",
+    "workbox-strategies": "^7.1.0",
     "workbox-window": "^7.1.0"
   }
 }
