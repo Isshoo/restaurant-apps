@@ -131,7 +131,7 @@ const Home = {
     // });
     // SEARCH
 
-    ambilDataResto();
+    await ambilDataResto();
   },
 };
 
