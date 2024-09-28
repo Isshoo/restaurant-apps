@@ -1,4 +1,4 @@
-import RestoApi from '../../datas/resto-api';
+import RestoDbSource from '../../datas/resto-api';
 
 const Home = {
   async render() {
@@ -31,7 +31,7 @@ const Home = {
     // RENDER
 
     const ambilDataResto = async () => {
-      const dataResto = await RestoApi.getResto();
+      const dataResto = await RestoDbSource.listResto();
       render(dataResto);
     };
 
@@ -58,7 +58,7 @@ const Home = {
       ratingList.classList.add('active');
 
       const cariResto = async () => {
-        const response = await RestoApi.getResto();
+        const response = await RestoDbSource.listResto();
         const byRating = response.sort((a, b) => b.rating - a.rating);
 
         render(byRating);
@@ -75,7 +75,7 @@ const Home = {
       cityList.classList.add('active');
 
       const cariResto = async () => {
-        const response = await RestoApi.getResto();
+        const response = await RestoDbSource.listResto();
         const byCity = response.sort((a, b) => a.city.localeCompare(b.city));
 
         render(byCity);
@@ -112,23 +112,23 @@ const Home = {
     // NAVBAR
 
     // SEARCH
-    const searchForm = document.getElementById('searchForm');
+    // const searchForm = document.getElementById('searchForm');
 
-    searchForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    // searchForm.addEventListener('submit', (e) => {
+    //   e.preventDefault();
 
-      const namaResto = e.target.elements.searchInput.value.toLowerCase();
+    //   const namaResto = e.target.elements.searchInput.value.toLowerCase();
 
-      const cariResto = async () => {
-        const response = await RestoApi.getResto(namaResto);
-        const hasil = response.filter((resto) => resto.name.toLowerCase().includes(namaResto));
+    //   const cariResto = async () => {
+    //     const response = await RestoApi.getResto(namaResto);
+    //     const hasil = response.filter((resto) => resto.name.toLowerCase().includes(namaResto));
 
-        render(hasil);
-      };
+    //     render(hasil);
+    //   };
 
-      cariResto();
-      searchForm.reset();
-    });
+    //   cariResto();
+    //   searchForm.reset();
+    // });
     // SEARCH
 
     ambilDataResto();

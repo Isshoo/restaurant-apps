@@ -1,18 +1,41 @@
-const endpoint = './data/DATA.json';
+import API_ENDPOINT from '../globals/api-endpoint';
 
-class RestoApi {
-  static async getResto() {
-    try {
-      const response = await fetch(`${endpoint}`);
-      const responseJson = await response.json();
-      const data = responseJson.restaurants;
+class RestoDbSource {
+  static async listResto() {
+    const response = await fetch(API_ENDPOINT.LIST);
+    const responseJson = await response.json();
+    return responseJson.restaurants;
+  }
 
-      console.log(data);
-      return data;
-    } catch (error) {
-      throw new Error('error fetching');
-    }
+  static async detailResto(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL(id));
+    const responseJson = await response.json();
+    return responseJson.restaurant;
+  }
+
+  static async searchResto(query) {
+    const response = await fetch(API_ENDPOINT.SEARCH(query));
+    const responseJson = await response.json();
+    return responseJson.restaurant;
+  }
+
+  static async reviewResto(resto) {
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: resto.id,
+        name: resto.name,
+        review: resto.review,
+      }),
+    };
+
+    const response = await fetch(API_ENDPOINT.REVIEW, options);
+    const responseJson = await response.json();
+    return responseJson.customerReviews;
   }
 }
 
-export default RestoApi;
+export default RestoDbSource;
