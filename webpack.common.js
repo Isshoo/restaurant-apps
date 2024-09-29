@@ -47,9 +47,24 @@ module.exports = {
         },
       ],
     }),
-    new WorkboxWebpackPlugin.InjectManifest({
-      swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
+    new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'restodb-api',
+          },
+        },
+        {
+          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/large/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'restodb-image-api',
+          },
+        },
+      ],
     }),
   ],
 };
