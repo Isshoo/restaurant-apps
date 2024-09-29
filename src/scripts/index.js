@@ -5,6 +5,7 @@ import './components/footer-bar';
 import './components/header-bar';
 import './components/hero-section';
 import './components/explore-section';
+import './components/favorite-section';
 import './components/food-section';
 import './components/resto-item';
 
