@@ -531,8 +531,6 @@ main {
             }
 
             h3 {
-              
-
               a {
                 font-size: 1.2rem;
                 font-weight: 700;
@@ -545,6 +543,13 @@ main {
                 min-width: 44px;
                 min-height: 44px;
                 text-decoration: none;
+
+                &:hover {
+                  color: $red;
+                }
+                &:active {
+                  color: red;
+                }
               }
             }
             p {
@@ -647,23 +652,29 @@ main {
   Like
 */
 .like {
-  width: 55px;
-  height: 55px;
+  width: 3.5rem;
+  height: 3.5rem;
+  min-width: 44px;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #db0000;
   
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 1rem;
+  right: 1rem;
   border-radius: 50%;
   border: 0;
   
-  font-size: 18px;
+  font-size: 1.35rem;
   color: white;
   cursor: pointer;
 }
+
+/*
+  Like
+*/
 
 footer {
   background-color: $black;

@@ -16,7 +16,9 @@ class RestoDbSource {
   static async searchResto(query) {
     const response = await fetch(API_ENDPOINT.SEARCH(query));
     const responseJson = await response.json();
-    return responseJson.restaurant;
+    const { restaurants: restos } = responseJson;
+
+    return restos;
   }
 
   static async reviewResto(resto) {

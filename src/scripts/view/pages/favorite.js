@@ -108,23 +108,23 @@ const Favorite = {
     // NAVBAR
 
     // SEARCH
-    // const searchForm = document.getElementById('searchForm');
+    const searchForm = document.getElementById('searchForm');
 
-    // searchForm.addEventListener('submit', (e) => {
-    //   e.preventDefault();
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    //   const namaResto = e.target.elements.searchInput.value.toLowerCase();
+      const namaResto = e.target.elements.searchInput.value.toLowerCase();
 
-    //   const cariResto = async () => {
-    //     const response = await RestoApi.getResto(namaResto);
-    //     const hasil = response.filter((resto) => resto.name.toLowerCase().includes(namaResto));
+      const cariResto = async () => {
+        const response = await FavoriteRestoIdb.getAllResto();
+        const hasil = response.filter((resto) => resto.name.toLowerCase().includes(namaResto));
 
-    //     render(hasil);
-    //   };
+        render(hasil);
+      };
 
-    //   cariResto();
-    //   searchForm.reset();
-    // });
+      cariResto();
+      searchForm.reset();
+    });
     // SEARCH
 
     await ambilDataResto();
