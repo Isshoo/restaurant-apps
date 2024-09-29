@@ -1,9 +1,9 @@
-import { precacheAndRoute } from 'workbox-precaching';
+// import { precacheAndRoute } from 'workbox-precaching';
 import { registerRoute, Route } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
 
 // Do precaching
-precacheAndRoute(self.__WB_MANIFEST);
+// precacheAndRoute(self.__WB_MANIFEST);
 
 const restodbApi = new Route(
   ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev'),
