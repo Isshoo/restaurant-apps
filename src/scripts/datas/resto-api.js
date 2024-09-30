@@ -7,10 +7,41 @@ class RestoDbSource {
     return responseJson.restaurants;
   }
 
-  static async detailResto(id) {
+  static async getRestaurantDetails(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     const responseJson = await response.json();
-    return responseJson.restaurant;
+    const { restaurant } = responseJson;
+
+    return {
+      id: restaurant.id,
+      name: restaurant.name,
+      description: restaurant.description,
+      city: restaurant.city,
+      address: restaurant.address,
+      pictureId: restaurant.pictureId,
+      categories: restaurant.categories.map((category) => category.name),
+      rating: restaurant.rating,
+    };
+  }
+
+  static async getRestaurantMenus(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL(id));
+    const responseJson = await response.json();
+    const { restaurant } = responseJson;
+
+    return {
+      foods: restaurant.menus.foods.map((food) => food.name),
+      drinks: restaurant.menus.drinks.map((drink) => drink.name),
+    };
+  }
+
+  static async getCustomerReviews(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL(id));
+    const responseJson = await response.json();
+    const { restaurant } = responseJson;
+    const { customerReviews: reviews } = restaurant;
+
+    return reviews;
   }
 
   static async searchResto(query) {

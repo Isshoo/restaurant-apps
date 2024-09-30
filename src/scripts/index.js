@@ -8,6 +8,9 @@ import './components/explore-section';
 import './components/favorite-section';
 import './components/food-section';
 import './components/resto-item';
+import './components/resto-detail';
+import './components/resto-menus';
+import './components/resto-reviews';
 
 import App from './view/app';
 import swRegister from './utility/sw-register';
