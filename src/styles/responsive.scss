@@ -45,6 +45,8 @@
       }
     }
   }
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -101,6 +103,24 @@
       }
     }
   }
+
+  .detail-card{
+    grid-template-areas: 
+      "title title title title title"
+      "img img img info info"
+      "img img img info info"
+    ;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .detail-card{
+    grid-template-areas: 
+      "title title"
+      "img info"
+      "img info"
+    ;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -108,5 +128,13 @@
   .navbar-con,
   footer {
     max-width: 1000px;
+  }
+
+  .detail-card{
+    grid-template-areas: 
+      "title title"
+      "img info"
+      "img info"
+    ;
   }
 }

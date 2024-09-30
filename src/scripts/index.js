@@ -11,6 +11,7 @@ import './components/resto-item';
 import './components/resto-detail';
 import './components/resto-menus';
 import './components/resto-reviews';
+import './components/form-review';
 
 import App from './view/app';
 import swRegister from './utility/sw-register';

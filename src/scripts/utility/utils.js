@@ -17,16 +17,22 @@ class Utils {
 
   static generateCreatedAt() {
     const date = new Date();
-    return date.toISOString();
+
+    const options = {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    };
+
+    return date.toLocaleDateString('id-ID', options);
   }
 
-  static makeNewObject(id, title, body, createdAt, archived) {
+  static makeReview(id, name, review, date) {
     return {
       id,
-      title,
-      body,
-      createdAt,
-      archived,
+      name,
+      review,
+      date,
     };
   }
 }

@@ -52,16 +52,16 @@ class RestoDbSource {
     return restos;
   }
 
-  static async reviewResto(resto) {
+  static async reviewResto(review) {
     const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id: resto.id,
-        name: resto.name,
-        review: resto.review,
+        id: review.id,
+        name: review.name,
+        review: review.review,
       }),
     };
 

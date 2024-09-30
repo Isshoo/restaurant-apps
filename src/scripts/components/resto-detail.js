@@ -33,22 +33,20 @@ class RestoDetail extends HTMLElement {
   render() {
     this.emptyContent();
     this.innerHTML += `
-         <article class="resto-card">
-              <h2>${this.resto.name}</h2>
-              <div class="resto-img">
+         <article class="detail-card">
+              <h2 class="detail-title">${this.resto.name}</h2>
+              <div class="detail-img">
                 <img src="${CONFIG.BASE_IMAGE_URL + this.resto.pictureId}" alt="gambar restaurant ${this.resto.name}" />
               </div>
 
-              <div class="resto-info">
+              <div class="detail-info">
                 <p>${this.resto.categories}</p>
                 <p>${this.resto.address}</p>
                 <p>${this.resto.city}</p>
-                <p>
+                <p>${this.resto.rating} <i class="fa-solid fa-star"></i></p>
+                 <p>
                 ${this.resto.description}
                 </p>
-              </div>
-              <div class="resto-rate">
-                <p><i class="fa-solid fa-star"></i> ${this.resto.rating}</p>
               </div>
             </article>
         `;

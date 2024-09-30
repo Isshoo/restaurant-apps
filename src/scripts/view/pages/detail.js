@@ -1,19 +1,27 @@
 import UrlParser from '../../routes/url-parser';
 import RestoDbSource from '../../datas/resto-api';
 import LikeButtonInitiator from '../../utility/like-button-initiator';
+import Utils from '../../utility/utils';
 
 const Detail = {
   async render() {
     return `
+    <section id="detailContainer">
+     <div id="restoDetail">
       <div id="resto" class="resto"></div>
       <div id="menus" class="menus"></div>
-      <div id="reviews" class="reviews"></div>
+      <div id="reviewContainer">
+       <form-review></form-review>
+       <div id="reviews" class="reviews"></div>
+      </div>
       <div id="likeButtonContainer"></div>
+     </div>
+    </section>
     `;
   },
 
   async afterRender() {
-    // wait
+    // RENDER
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restoDetails = await RestoDbSource.getRestaurantDetails(url.id);
     const restoMenus = await RestoDbSource.getRestaurantMenus(url.id);
@@ -50,11 +58,39 @@ const Detail = {
       reviewsContainer.append(...restoList);
     };
 
-    async function render() {
-      renderDetail(restoDetails);
-      renderMenus(restoMenus);
-      renderReviews(restoReviews);
-    }
+    renderDetail(restoDetails);
+    renderMenus(restoMenus);
+
+    const tampilkanReviews = async () => {
+      try {
+        const restoReview = await RestoDbSource.getCustomerReviews(url.id);
+
+        renderReviews(restoReview);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+
+    tampilkanReviews();
+
+    // ADD REVIEW
+    const formNewReview = document.getElementById('reviewForm');
+    formNewReview.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const { id } = restoDetails;
+      const name = document.getElementById('name').value;
+      const review = document.getElementById('description').value;
+      const date = Utils.generateCreatedAt();
+
+      const newReview = Utils.makeReview(id, name, review, date);
+
+      await RestoDbSource.reviewResto(newReview).then(() => {
+        tampilkanReviews();
+      });
+      // console.log(newReview);
+      formNewReview.reset();
+    });
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
@@ -72,8 +108,6 @@ const Detail = {
         customerReviews: restoReviews,
       },
     });
-
-    render();
   },
 };
 

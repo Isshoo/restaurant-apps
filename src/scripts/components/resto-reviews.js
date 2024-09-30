@@ -26,11 +26,21 @@ class RestoReviews extends HTMLElement {
   render() {
     this.emptyContent();
     this.innerHTML += `
-         <article class="resto-card">
-             <p>${this.resto.name}</p>
-             <p>${this.resto.review}</p>
-             <p>${this.resto.date}</p>
-            </article>
+          <div class="review-item">
+            <div class="review-name">
+              <h3>${this.resto.name}</h3>
+            </div>
+            <div class="review-des">
+              <p>
+                ${this.resto.review}
+              </p>
+            </div>
+            <div class="review-date">
+              <p>
+                ${this.resto.date}
+              </p>
+            </div>
+          </div>
         `;
   }
 }
