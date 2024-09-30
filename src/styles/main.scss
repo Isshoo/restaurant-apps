@@ -714,7 +714,6 @@ main {
 */
 
 input,
-button,
 textarea {
   border: none;
   outline: none;
@@ -844,10 +843,28 @@ form-review {
   }
 }
 
+/*
+  Loading
+*/
+
+.loading-con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1.5rem;
+
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
 
 
-
+/*
+  Loading
+*/
 
 /*
   Like

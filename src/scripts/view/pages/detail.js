@@ -71,7 +71,7 @@ const Detail = {
       }
     };
 
-    tampilkanReviews();
+    await tampilkanReviews();
 
     // ADD REVIEW
     const formNewReview = document.getElementById('reviewForm');

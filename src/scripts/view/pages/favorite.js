@@ -1,4 +1,5 @@
 import FavoriteRestoIdb from '../../datas/favorite-resto-idb';
+import Loading from '../../utility/loading';
 
 const Favorite = {
   async render() {
@@ -14,13 +15,13 @@ const Favorite = {
     // RENDER
     const restoContainer = document.querySelector('#resto-list');
 
-    const render = (restos) => {
+    const render = async (restos) => {
       const restoList = restos.map((resto) => {
         const restoItem = document.createElement('resto-item');
         restoItem.restow = resto;
         return restoItem;
       });
-
+      await Loading.restoList();
       restoContainer.innerHTML = '';
       restoContainer.append(...restoList);
     };
