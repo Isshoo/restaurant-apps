@@ -22,7 +22,7 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', () => {
   app.renderPage();
-  await swRegister();
+  swRegister();
 });
