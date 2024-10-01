@@ -75,7 +75,7 @@ const Detail = {
 
     // ADD REVIEW
     const formNewReview = document.getElementById('reviewForm');
-    formNewReview.addEventListener('submit', async (event) => {
+    formNewReview.addEventListener('submit', (event) => {
       event.preventDefault();
 
       const { id } = restoDetails;
@@ -85,7 +85,8 @@ const Detail = {
 
       const newReview = Utils.makeReview(id, name, review, date);
 
-      await RestoDbSource.reviewResto(newReview).then(() => {
+      RestoDbSource.reviewResto(newReview).then(async () => {
+        await RestoDbSource.getCustomerReviews(url.id);
         tampilkanReviews();
       });
       // console.log(newReview);
