@@ -54,8 +54,16 @@ const Detail = {
         return restoItem;
       });
 
+      const restoNewest = restoList.sort((a, b) => {
+        const dateA = Utils.parseDate(a.restow.date);
+        const dateB = Utils.parseDate(b.restow.date);
+
+        return dateB - dateA;
+      });
+      console.log(restoNewest);
+
       reviewsContainer.innerHTML = '';
-      reviewsContainer.append(...restoList);
+      reviewsContainer.append(...restoNewest);
     };
 
     renderDetail(restoDetails);
