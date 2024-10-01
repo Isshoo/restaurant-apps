@@ -11,7 +11,7 @@ class FormReview extends HTMLElement {
     this.emptyContent();
     this.innerHTML += `
         <section id="formReview-con">
-          <h2>Support Us!</h2>
+          <h2>Support <span>Us!</span></h2>
           <form id="reviewForm">
             <div>
               <label for="name">Name</label>
@@ -22,7 +22,7 @@ class FormReview extends HTMLElement {
                 placeholder="Name"
               />
             </div>
-            <div>
+            <div class="desc-con">
               <label for="description">Reviews</label>
               <textarea
                 id="description"

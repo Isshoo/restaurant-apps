@@ -770,6 +770,7 @@ main {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+  padding-block: 1rem;
 }
 
 /*
@@ -792,35 +793,56 @@ textarea {
 }
 
 textarea {
-  height: 8rem;
+  min-height: 8rem;
   resize: vertical;
 }
 
 label {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 
 form-review {
   width: 100%;
+  display: flex;
+  align-self: stretch;
 }
 
 #formReview-con {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 1.5rem 2rem 2rem;
   background-color: transparent;
   border-radius: 16px;
-  border: 1px solid $black;
+  height: 100%;
 
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    span {
+      color: $yellow;
+    }
+  }
 }
 
 #reviewForm {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  height: 100%;
+
+  .desc-con {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+      flex: 1;
+    }
+  }
 
 }
 
@@ -861,22 +883,31 @@ form-review {
 
 #reviews{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   grid-template-rows: auto;
-  gap: 1rem;
+  gap: 1.25rem;
   padding: 1.5rem;
-  background-color: $black;
-  border-radius: 16px;
+  margin: 0.5rem;
+  border-top: 1px solid gray;
+  border-radius: 16px 0 0 16px;
   width: 100%;
+  max-height: 25rem;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 2px;
+    background-color: transparent;
+    padding-block: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $black;
+    border-radius: 16px;
+  }
   
   resto-reviews {
     display: flex;
     align-items: stretch;
   
     .review-item {
-      border: 1px solid $yellow;
-      border-radius: 16px;
-      padding: 1rem;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       background-color: black;
       display: flex;
@@ -886,12 +917,16 @@ form-review {
       justify-content: space-between;
       width: 100%;
       overflow: auto;
+      border-bottom: 1px solid $yellow;
+      padding-block: 0.5rem;
       
       .review-name {
       overflow: auto;
        h3 {
-        color: white;
+        color: rgb(202, 202, 202);
         margin-block: 0;
+        
+        font-size: 0.9rem;
        }
       }
       
@@ -901,11 +936,16 @@ form-review {
         p {
           color: white;
           margin-block: 0;
+          font-size: 1rem;
         }
       }
       
       .review-date {
         align-self: flex-end;
+        p{
+          font-size: 0.9rem;
+          color: rgb(203, 203, 203);
+        }
       }
     }
   }
