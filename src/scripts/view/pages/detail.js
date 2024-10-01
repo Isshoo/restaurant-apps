@@ -30,6 +30,7 @@ const Detail = {
     const restoContainer = document.querySelector('#resto');
     const menusContainer = document.querySelector('#menus');
     const reviewsContainer = document.querySelector('#reviews');
+    const formContainer = document.querySelector('form-review');
 
     const renderDetail = (restos) => {
       const restoItem = document.createElement('resto-detail');
@@ -45,6 +46,7 @@ const Detail = {
 
       menusContainer.innerHTML = '';
       menusContainer.append(restoItem);
+      formContainer.style.display = 'block';
     };
 
     const renderReviews = (restos) => {

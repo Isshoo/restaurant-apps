@@ -31,9 +31,11 @@ class Loading {
 
   static async restoMenu() {
     const menuContainer = document.querySelector('#menus');
+    const formContainer = document.querySelector('form-review');
     const loadingElement = document.createElement('res-loading');
 
     menuContainer.innerHTML = '';
+    formContainer.style.display = 'none';
 
     menuContainer.append(loadingElement);
     await this.delay();
