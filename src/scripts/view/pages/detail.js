@@ -58,9 +58,13 @@ const Detail = {
         const dateA = Utils.parseDate(a.restow.date);
         const dateB = Utils.parseDate(b.restow.date);
 
+        if (dateB - dateA === 0) {
+          // urutkan berdasarkan urutan input terbaru Jika tanggalnya sama
+          return restoList.indexOf(b) - restoList.indexOf(a);
+        }
+
         return dateB - dateA;
       });
-      console.log(restoNewest);
 
       reviewsContainer.innerHTML = '';
       reviewsContainer.append(...restoNewest);
