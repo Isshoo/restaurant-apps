@@ -61,7 +61,6 @@ const Detail = {
         const dateB = Utils.parseDate(b.restow.date);
 
         if (dateB - dateA === 0) {
-          // urutkan berdasarkan urutan input terbaru Jika tanggalnya sama
           return restoList.indexOf(b) - restoList.indexOf(a);
         }
 

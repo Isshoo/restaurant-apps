@@ -25,7 +25,7 @@ class RestoMenus extends HTMLElement {
   displayItem() {
     const foodsCon = this.querySelector('#foodsList');
     const foodsList = this.resto.foods.map((food) => {
-      const foodList = document.createElement('li');
+      const foodList = document.createElement('p');
       foodList.textContent = food;
       return foodList;
     });
@@ -34,7 +34,7 @@ class RestoMenus extends HTMLElement {
 
     const drinksCon = this.querySelector('#drinksList');
     const drinksList = this.resto.drinks.map((drink) => {
-      const drinkList = document.createElement('li');
+      const drinkList = document.createElement('p');
       drinkList.textContent = drink;
       return drinkList;
     });
@@ -47,13 +47,13 @@ class RestoMenus extends HTMLElement {
     this.emptyContent();
     this.innerHTML += `
          <article class="menus-container">
-                <div>
+                <div id="food" class="menusOpt">
                 <h3>Foods</h3>
-                 <ul id="foodsList"></ul>
+                 <section id="foodsList" class="menuList"></section>
                 </div>
-                <div>
+                <div id="drink" class="menusOpt">
                 <h3>Drinks</h3>
-                 <ul id="drinksList"></ul>
+                 <section id="drinksList" class="menuList"></section>
                 </div>
             </article>
         `;
