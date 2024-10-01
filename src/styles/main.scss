@@ -680,11 +680,20 @@ main {
   "img"
   "info"
   ;
-  gap: 1rem;
+  gap: 1.2rem;
 
   .detail-title{
     grid-area: title;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    
+    h2 {
+      border-bottom: 1px solid $red;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-block: 0.25rem;
+      padding-block: 0.5rem;
+    }
   }
 
   .detail-img{
@@ -694,11 +703,58 @@ main {
       height: 100%;
       object-fit: cover;
       object-position: center;
+      border-radius: 10px;
     }
   }
 
   .detail-info{
     grid-area: info;
+    display: grid;
+    grid-template-areas: 
+      "cat"
+      "add"
+      "city"
+      "rat"
+      "desc"
+    ;
+    gap: 1rem;
+
+    .infos{
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      .labels {
+        color: $yellow;
+        font-size: 0.9rem; 
+        font-weight: 800;
+      }
+
+      p {
+        margin-left: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    #info-cat{
+      grid-area: cat;
+    }
+
+    #info-address{
+      grid-area: add;
+    }
+
+    #info-city{
+      grid-area: city;
+    }
+
+    #info-rating{
+      grid-area: rat;
+    }
+
+    #info-desc{
+      grid-area: desc;
+    }
   }
 
 }

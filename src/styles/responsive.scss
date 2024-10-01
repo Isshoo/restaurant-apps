@@ -19,6 +19,17 @@
       }
     }
   }
+
+
+  .detail-card{
+    .detail-info {
+      grid-template-areas: 
+        "cat city"
+        "add rat"
+        "desc desc"
+      ;
+    }
+  }
 }
 
 @media screen and (min-width: 540px) {
