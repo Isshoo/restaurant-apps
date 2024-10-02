@@ -56,5 +56,63 @@
       "type": "image/png",
       "purpose": "any"
     }
-  ]
+  ],
+   "screenshots": [
+    {
+     "src": "./screenshots/desktop-best.png",
+      "sizes": "1440x812",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Best Seller Menu"
+    },
+    {
+     "src": "./screenshots/desktop-details.png",
+      "sizes": "1440x812",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Restaurant Details"
+    },
+    {
+     "src": "./screenshots/desktop-hero.png",
+      "sizes": "1440x812",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Hero Section"
+    },
+    {
+     "src": "./screenshots/desktop-list.png",
+      "sizes": "1440x812",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Restaurant List"
+    },
+    {
+     "src": "./screenshots/mobile-best.png",
+      "sizes": "360x800",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Best Seller Menu"
+    },
+    {
+     "src": "./screenshots/mobile-details.png",
+      "sizes": "360x800",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Restaurant Details"
+    },
+    {
+     "src": "./screenshots/mobile-hero.png",
+      "sizes": "360x800",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Hero Section"
+    },
+    {
+     "src": "./screenshots/mobile-list.png",
+      "sizes": "360x800",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Restaurant List"
+    }
+]
 }
