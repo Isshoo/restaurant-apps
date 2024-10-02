@@ -32,13 +32,6 @@ module.exports = merge(common, {
             cacheName: 'restodb-api',
           },
         },
-        {
-          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/large/'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'restodb-image-api',
-          },
-        },
       ],
     }),
   ],
