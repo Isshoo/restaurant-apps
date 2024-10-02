@@ -13,6 +13,7 @@ import './components/resto-menus';
 import './components/resto-reviews';
 import './components/form-review';
 import './components/res-loading';
+import './utility/navbar-tambahan';
 
 import App from './view/app';
 import swRegister from './utility/sw-register';

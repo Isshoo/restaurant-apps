@@ -106,6 +106,8 @@ const Detail = {
       formNewReview.reset();
     });
 
+    // ADD REVIEW
+
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {

@@ -56,8 +56,11 @@
       }
     }
   }
-
-
+  .like {
+    span {
+      display: block;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -155,5 +158,17 @@
       "img info"
       "img info"
     ;
+  }
+
+  .like {
+    right: 20%;
+    transform: translateX(20%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .like {
+    right: 25%;
+    transform: translateX(25%);
   }
 }
