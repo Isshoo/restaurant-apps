@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';
 
@@ -25,9 +26,19 @@ const FavoriteRestoIdb = {
     }
   },
   async putResto(resto) {
+    Swal.fire({
+      title: 'Success',
+      icon: 'success',
+      text: 'Restaurant ditambahkan ke daftar favorit!',
+    });
     return (await dbPromise).put(OBJECT_STORE_NAME, resto);
   },
   async deleteResto(id) {
+    Swal.fire({
+      title: 'Success',
+      icon: 'success',
+      text: 'Restaurant dihapus dari daftar favorit!',
+    });
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
 };

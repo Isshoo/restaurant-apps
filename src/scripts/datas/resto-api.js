@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import API_ENDPOINT from '../globals/api-endpoint';
 import Loading from '../utility/loading';
 
@@ -9,7 +10,12 @@ class RestoDbSource {
       const responseJson = await response.json();
       return responseJson.restaurants;
     } catch {
-      throw new Error('err');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Gagal menampilkan list restoran!',
+      });
+      return console.log('Gagal menampilkan list restoran!');
     }
   }
 
@@ -31,7 +37,12 @@ class RestoDbSource {
         rating: restaurant.rating,
       };
     } catch {
-      throw new Error('err');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Gagal mendapatkan detail restoran!',
+      });
+      return console.log('Gagal mendapatkan detail restoran!');
     }
   }
 
@@ -47,7 +58,12 @@ class RestoDbSource {
         drinks: restaurant.menus.drinks.map((drink) => drink.name),
       };
     } catch {
-      throw new Error('err');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Gagal mendapatkan informasi menu restoran!',
+      });
+      return console.log('Gagal mendapatkan informasi menu restoran!');
     }
   }
 
@@ -61,7 +77,12 @@ class RestoDbSource {
 
       return reviews;
     } catch {
-      throw new Error('err');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Gagal menampilkan reviews customer!',
+      });
+      return console.log('Gagal menampilkan reviews customer!');
     }
   }
 
@@ -74,7 +95,12 @@ class RestoDbSource {
 
       return restos;
     } catch {
-      throw new Error('err');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Gagal mendapatkan restoran!',
+      });
+      return console.log('Gagal mendapatkan restoran!');
     }
   }
 
@@ -94,9 +120,21 @@ class RestoDbSource {
       await Loading.restoReview();
       const response = await fetch(API_ENDPOINT.REVIEW, options);
       const responseJson = await response.json();
+
+      Swal.fire({
+        title: `${responseJson.message}`,
+        icon: 'success',
+        text: 'Berhasil menambahkan review!',
+      });
+
       return responseJson.customerReviews;
     } catch {
-      throw new Error('err');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Gagal menambahkan review!',
+      });
+      return console.log('Gagal menambahkan review!');
     }
   }
 }
