@@ -12,7 +12,7 @@ class FormReview extends HTMLElement {
     this.innerHTML += `
         <section id="formReview-con">
           <h2>Support <span>Us!</span></h2>
-          <form id="reviewForm">
+          <form id="reviewForm" autocomplete="on">
             <div>
               <label for="name">Name</label>
               <input
@@ -20,6 +20,7 @@ class FormReview extends HTMLElement {
                 id="name"
                 name="name"
                 placeholder="Name"
+                autocomplete="on"
               />
             </div>
             <div class="desc-con">
@@ -28,6 +29,7 @@ class FormReview extends HTMLElement {
                 id="description"
                 name="description"
                 placeholder="Give your reviews"
+                autocomplete="on"
               ></textarea>
             </div>
             <button type="submit" id="reviewSubmit">Add Reviews</button>
