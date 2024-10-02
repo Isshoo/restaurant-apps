@@ -24,6 +24,8 @@ module.exports = merge(common, {
   plugins: [
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
+      clientsClaim: true,
+      skipWaiting: true,
       runtimeCaching: [
         {
           urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev'),
