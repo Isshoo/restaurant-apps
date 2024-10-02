@@ -1056,24 +1056,48 @@ form-review {
   Like
 */
 .like {
-  width: 3.5rem;
-  height: 3.5rem;
+  padding: 0 1rem;
   min-width: 44px;
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #db0000;
+  gap: 0.5rem;
+  background-color: #da291cca;
+  backdrop-filter: blur(10px);
   
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  border-radius: 50%;
+  top: 6rem;
+  right: 8%;
   border: 0;
-  
-  font-size: 1.35rem;
-  color: white;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease-out;
+  z-index: 999;
+  border: 1px solid grey;
+  box-shadow: -1px 1px 5px rgba(255, 255, 255, 0.608);
+
+  &:hover {
+    background-color: $red;
+    transition: ease-out 0.3s;
+  }
+  &:active {
+    background-color: red;
+  }
+
   cursor: pointer;
+
+  span {
+    font-size: 1rem;
+    color: white;
+  }
+}
+
+#likedButton {
+  background-color: rgb(57, 57, 57);
+  &:hover {
+    background-color: $red;
+    transition: ease-out 0.3s;
+  }
 }
 
 /*

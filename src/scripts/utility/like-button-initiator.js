@@ -37,7 +37,7 @@ const LikeButtonInitiator = {
   _renderLiked() {
     this._likeButtonContainer.innerHTML = createLikedButtonTemplate();
 
-    const likeButton = document.querySelector('#likeButton');
+    const likeButton = document.querySelector('#likedButton');
     likeButton.addEventListener('click', async () => {
       await FavoriteRestoIdb.deleteResto(this._Resto.id);
 
