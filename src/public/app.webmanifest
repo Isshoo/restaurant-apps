@@ -9,6 +9,12 @@
   "theme_color": "#da281c",
   "icons": [
     {
+      "src": "./icons/restaurant-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "./icons/restaurant-72.png",
       "sizes": "72x72",
       "type": "image/png",
@@ -23,18 +29,6 @@
     {
       "src": "./icons/restaurant-128.png",
       "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/restaurant-144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/restaurant-152.png",
-      "sizes": "152x152",
       "type": "image/png",
       "purpose": "any"
     },
