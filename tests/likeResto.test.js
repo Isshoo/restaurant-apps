@@ -56,7 +56,7 @@ describe('Add A Resto to Favorited', () => {
       },
     });
 
-    // Tambahkan resto dengan ID 1 ke daftar film yang disukai
+    // Tambahkan resto dengan ID 1 ke daftar resto yang disukai
     await FavoriteRestoIdb.putResto({ id: 1 });
 
     // Simulasikan pengguna menekan tombol favorite
