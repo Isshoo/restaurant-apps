@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import RestoDbSource from '../../datas/resto-api';
-import LikeButtonInitiator from '../../utility/like-button-initiator';
+import LikeButtonPresenter from '../../utility/like-button-presenter';
 import Utils from '../../utility/utils';
 
 const Detail = {
@@ -108,7 +108,7 @@ const Detail = {
 
     // ADD REVIEW
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {
         id: restoDetails.id,

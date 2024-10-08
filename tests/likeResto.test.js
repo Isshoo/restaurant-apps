@@ -1,5 +1,5 @@
-import LikeButtonInitiator from '../src/scripts/utility/like-button-initiator';
 import FavoriteRestoIdb from '../src/scripts/datas/favorite-resto-idb';
+import * as TestFactories from './helpers/testFactories';
 
 describe('Add A Resto to Favorited', () => {
   const addLikeButtonContainer = () => {
@@ -11,33 +11,18 @@ describe('Add A Resto to Favorited', () => {
   });
 
   it('should show the favorite button when the resto has not been favorited before', async () => {
-    await LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto: {
-        id: 1,
-      },
-    });
+    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
     expect(document.querySelector('[aria-label="like this resto"]')).toBeTruthy();
   });
 
   it('should not show the unfavorite button when the resto has not been favorited before', async () => {
-    await LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto: {
-        id: 1,
-      },
-    });
+    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
     expect(document.querySelector('[aria-label="unlike this resto"]')).toBeFalsy();
   });
 
   it('should be able to like the resto', async () => {
-    await LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto: {
-        id: 1,
-      },
-    });
+    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
@@ -49,12 +34,7 @@ describe('Add A Resto to Favorited', () => {
   });
 
   it('should not add a resto again when its already liked', async () => {
-    await LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto: {
-        id: 1,
-      },
-    });
+    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
     // Tambahkan resto dengan ID 1 ke daftar resto yang disukai
     await FavoriteRestoIdb.putResto({ id: 1 });
@@ -69,10 +49,7 @@ describe('Add A Resto to Favorited', () => {
 
   // Menggunakan metode xit, bukan it, untuk menonaktifkan sebuah test case
   it('should not add a resto when it has no id', async () => {
-    await LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      resto: {},
-    });
+    await TestFactories.createLikeButtonPresenterWithResto({});
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
