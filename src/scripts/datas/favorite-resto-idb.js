@@ -1,3 +1,5 @@
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable consistent-return */
 import Swal from 'sweetalert2';
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';
@@ -13,6 +15,9 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 const FavoriteRestoIdb = {
   async getResto(id) {
     try {
+      if (!id) {
+        return;
+      }
       return (await dbPromise).get(OBJECT_STORE_NAME, id);
     } catch {
       Swal.fire({
@@ -37,6 +42,9 @@ const FavoriteRestoIdb = {
   },
   async putResto(resto) {
     try {
+      if (!resto.hasOwnProperty('id')) {
+        return;
+      }
       Swal.fire({
         title: 'Success',
         icon: 'success',
