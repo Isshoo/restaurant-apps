@@ -21,4 +21,9 @@ exports.config = {
     I: './steps_file.js',
   },
   name: 'restaurant-apps',
+  plugins: {
+    screenshotsOnFail: {
+      enabled: false,
+    },
+  },
 };
