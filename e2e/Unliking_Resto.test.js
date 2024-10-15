@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const assert = require('assert');
 
-Feature('Liking Resto');
+Feature('Unliking Resto');
 
 Before(({ I }) => {
   I.amOnPage('/#/favorite');
@@ -11,7 +11,7 @@ Scenario('showing empty liked resto', ({ I }) => {
   I.see('', '#resto-list');
 });
 
-Scenario('liking one resto', async ({ I }) => {
+Scenario('liking one resto and then unlike that resto', async ({ I }) => {
   I.see('', '#resto-list');
 
   I.amOnPage('/');
@@ -32,4 +32,15 @@ Scenario('liking one resto', async ({ I }) => {
   const likedRestoTitle = await I.grabTextFrom('.resto-info h3');
 
   assert.strictEqual(firstRestoTitle, likedRestoTitle);
+
+  I.seeElement('.resto-info h3 a');
+  const likedResto = locate('.resto-info h3 a').first();
+  I.click(likedResto);
+
+  I.waitForElement('#likedButton', 10);
+  I.seeElement('#likedButton');
+  I.click('#likedButton');
+
+  I.amOnPage('/#/favorite');
+  I.see('', '#resto-list');
 });
