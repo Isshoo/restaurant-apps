@@ -7,6 +7,8 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminPngquant = require('imagemin-pngquant');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 require('dotenv').config({
   path: path.resolve('.env'),
@@ -43,6 +45,11 @@ module.exports = {
   },
 
   optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new TerserPlugin(),
+    ],
     splitChunks: {
       chunks: 'all',
       minSize: 20000,
