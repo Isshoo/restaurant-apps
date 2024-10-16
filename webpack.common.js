@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminPngquant = require('imagemin-pngquant');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 require('dotenv').config({
@@ -92,6 +93,9 @@ module.exports = {
         ImageminMozjpeg({
           quality: 50,
           progressive: true,
+        }),
+        ImageminPngquant({
+          quality: [0.5, 0.6],
         }),
       ],
     }),
