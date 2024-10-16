@@ -1,4 +1,5 @@
 const CONFIG = {
+  KEY: process.env.API_KEY_TRDB,
   BASE_URL: 'https://restaurant-api.dicoding.dev',
   BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/large/',
   DEFAULT_LANGUAGE: 'en-us',
