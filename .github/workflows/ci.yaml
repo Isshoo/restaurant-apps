@@ -23,3 +23,6 @@ jobs:
         run: |
           npm install
           npm run test
+        env:
+          CI: true
+          API_KEY_TRDB: ${{ secrets.API_KEY_TRDB }}
