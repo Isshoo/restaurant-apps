@@ -51,6 +51,7 @@ module.exports = {
     }),
 
     new ImageminWebpackPlugin({
+      test: /\.(jpe?g|png)/,
       plugins: [
         ImageminMozjpeg({
           quality: 50,

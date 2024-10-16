@@ -34,7 +34,7 @@ class HeaderBar extends HTMLElement {
               <a href="https://www.facebook.com/algi.ngenget/">
                 <figure>
                   <img
-                    src="./images/heros/hero-image_1.jpg"
+                    class="lazyload" data-src="./images/heros/hero-image_1.jpg"
                     alt="Profile user"
                     class="profilepic"
                   />

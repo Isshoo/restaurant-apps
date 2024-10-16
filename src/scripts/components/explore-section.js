@@ -21,7 +21,7 @@ class ExploreSection extends HTMLElement {
                 id="searchInput"
                 placeholder="Cari Restaurant"
               />
-              <button type="submit" id="searchSubmit">
+              <button type="submit" id="searchSubmit" aria-label="search button">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>

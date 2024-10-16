@@ -16,23 +16,23 @@ class FoodSection extends HTMLElement {
         </div>
         <div class="food-content">
           <article class="food-item">
-            <img src="./images/food/lalapan.jpg" alt="Lalapan" />
+            <img class="lazyload" data-src="./images/food/lalapan.jpg" alt="Lalapan" />
             <h3>Lalapan</h3>
           </article>
           <article class="food-item">
-            <img src="./images/food/martabak.jpg" alt="Martabak" />
+            <img class="lazyload" data-src="./images/food/martabak.jpg" alt="Martabak" />
             <h3>Martabak</h3>
           </article>
           <article class="food-item">
-            <img src="./images/food/mie-ceplok.jpg" alt="Mie Ceplok" />
+            <img class="lazyload" data-src="./images/food/mie-ceplok.jpg" alt="Mie Ceplok" />
             <h3>Mie Ceplok</h3>
           </article>
           <article class="food-item">
-            <img src="./images/food/nasi-campur.jpg" alt="Nasi Campur" />
+            <img class="lazyload" data-src="./images/food/nasi-campur.jpg" alt="Nasi Campur" />
             <h3>Nasi Campur</h3>
           </article>
           <article class="food-item">
-            <img src="./images/food/sate.jpg" alt="Sate" />
+            <img class="lazyload" data-src="./images/food/sate.jpg" alt="Sate" />
             <h3>Sate</h3>
           </article>
         </div>
