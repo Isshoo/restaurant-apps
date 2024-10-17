@@ -31,14 +31,10 @@ class RestoReviews extends HTMLElement {
               <h3>${this.resto.name}</h3>
             </div>
             <div class="review-des">
-              <p>"
-                ${this.resto.review}
-              "</p>
+              <p>" ${this.resto.review} "</p>
             </div>
             <div class="review-date">
-              <p>
-                ${this.resto.date}
-              </p>
+              <p>${this.resto.date}</p>
             </div>
           </div>
         `;
