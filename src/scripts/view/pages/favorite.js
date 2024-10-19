@@ -24,6 +24,10 @@ const Favorite = {
       await Loading.restoList();
       restoContainer.innerHTML = '';
       restoContainer.append(...restoList);
+
+      if (restoContainer.innerHTML === '') {
+        restoContainer.innerHTML = 'Tidak ada restoran yang disimpan sebagai favorit.';
+      }
     };
     // RENDER
 

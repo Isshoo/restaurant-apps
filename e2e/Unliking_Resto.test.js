@@ -8,11 +8,11 @@ Before(({ I }) => {
 });
 
 Scenario('showing empty liked resto', ({ I }) => {
-  I.see('', '#resto-list');
+  I.see('Tidak ada restoran yang disimpan sebagai favorit.', '#resto-list');
 });
 
 Scenario('liking one resto and then unlike that resto', async ({ I }) => {
-  I.see('', '#resto-list');
+  I.see('Tidak ada restoran yang disimpan sebagai favorit.', '#resto-list');
 
   I.amOnPage('/');
 
@@ -48,5 +48,5 @@ Scenario('liking one resto and then unlike that resto', async ({ I }) => {
   I.click('.swal2-confirm');
 
   I.amOnPage('/#/favorite');
-  I.see('', '#resto-list');
+  I.see('Tidak ada restoran yang disimpan sebagai favorit.', '#resto-list');
 });

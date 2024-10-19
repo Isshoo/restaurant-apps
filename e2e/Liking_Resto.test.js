@@ -8,11 +8,11 @@ Before(({ I }) => {
 });
 
 Scenario('showing empty liked resto', ({ I }) => {
-  I.see('', '#resto-list');
+  I.see('Tidak ada restoran yang disimpan sebagai favorit.', '#resto-list');
 });
 
 Scenario('liking one resto', async ({ I }) => {
-  I.see('', '#resto-list');
+  I.see('Tidak ada restoran yang disimpan sebagai favorit.', '#resto-list');
 
   I.amOnPage('/');
 
