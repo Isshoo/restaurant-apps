@@ -15,8 +15,13 @@ const Home = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-    // RENDER
+    const cat = document.querySelector('#cat');
+    const explore = document.querySelector('#explore');
+
+    cat.addEventListener('click', () => {
+      explore.scrollIntoView({ behavior: 'smooth' });
+    });
+
     const restoContainer = document.querySelector('#resto-list');
 
     const render = async (restos) => {
@@ -28,6 +33,10 @@ const Home = {
       await Loading.restoList();
       restoContainer.innerHTML = '';
       restoContainer.append(...restoList);
+
+      if (restoContainer.innerHTML === '') {
+        restoContainer.innerHTML = 'Tidak ada restoran untuk ditampilkan.';
+      }
     };
     // RENDER
 
