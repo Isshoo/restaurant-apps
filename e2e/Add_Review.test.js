@@ -11,27 +11,30 @@ Scenario('adding one new review', async ({ I }) => {
   const firstResto = locate('.resto-info h3 a').first();
   I.click(firstResto);
 
-  I.waitForElement('#reviewForm div input', 20);
-  I.seeElement('#reviewForm div input');
-  I.fillField('#reviewForm div input[name=name]', 'Johnny Doe');
+  I.waitForElement('#reviewForm', 20);
+  I.seeElement('#reviewForm .name-con #name');
+  I.click('#reviewForm .name-con #name');
+  I.clearField('#reviewForm .name-con #name');
+  I.wait(1);
+  I.fillField('#reviewForm .name-con #name', 'John Doe');
 
-  I.waitForElement('#reviewForm .desc-con textarea', 20);
-  I.seeElement('#reviewForm .desc-con textarea');
-  I.fillField('#reviewForm .desc-con textarea[name=description]', 'The Foods are Recommended!');
+  I.seeElement('#reviewForm .desc-con #description');
+  I.click('#reviewForm .desc-con #description');
+  I.clearField('#reviewForm .desc-con #description');
+  I.fillField('#reviewForm .desc-con #description', 'The Foods are Recommended!');
 
-  I.waitForElement('#reviewForm button', 20);
-  I.seeElement('#reviewForm button');
-  I.click('#reviewForm button[type=submit]');
+  I.seeElement('#reviewForm #reviewSubmit');
+  I.click('#reviewForm #reviewSubmit');
 
-  I.waitForElement('.swal2-container', 20); // Tambah waktu tunggu
+  I.waitForElement('.swal2-container', 20);
   I.seeElement('.swal2-container');
   I.click('.swal2-confirm');
 
   I.waitForElement('.review-item', 20);
   I.seeElement('.review-item');
-  const addedReviewName = (await I.grabTextFrom(locate('.review-item .review-name h3').first())).trim();
-  const addedReviewDescription = (await I.grabTextFrom(locate('.review-item .review-des p').first())).trim();
+  const addedReviewName = await I.grabTextFrom(locate('.review-item .review-name h3').first());
+  const addedReviewDescription = await I.grabTextFrom(locate('.review-item .review-des p').first());
 
-  assert.strictEqual(addedReviewName, 'Johnny Doe'); // Bandingkan nama secara tepat
+  assert.strictEqual(addedReviewName, 'John Doe');
   assert.strictEqual(addedReviewDescription, '" The Foods are Recommended! "');
 });

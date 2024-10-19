@@ -13,7 +13,7 @@ class FormReview extends HTMLElement {
         <section id="formReview-con">
           <h2>Support <span>Us!</span></h2>
           <form id="reviewForm" autocomplete="on">
-            <div>
+            <div class="name-con">
               <label for="name">Name</label>
               <input
                 type="text"
