@@ -34,21 +34,6 @@ module.exports = merge(common, {
             cacheName: 'restodb-api',
           },
         },
-        {
-          urlPattern: ({ url }) => url.href.startsWith('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'icon-fontawesome',
-          },
-        },
-
-        {
-          urlPattern: ({ url }) => url.href.startsWith('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'icon-fontawesome-webfonts',
-          },
-        },
       ],
     }),
   ],

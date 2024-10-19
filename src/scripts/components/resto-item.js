@@ -44,7 +44,7 @@ class RestoItem extends HTMLElement {
                 </p>
               </div>
               <div class="resto-rate">
-                <i class="fa-solid fa-star"></i>
+                <i>&#9734;</i>
                 <p>${this.resto.rating}</p>
               </div>
             </article>

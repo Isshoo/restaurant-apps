@@ -22,16 +22,16 @@ class FavoriteSection extends HTMLElement {
                   placeholder="Cari Restaurant"
                 />
                 <button type="submit" id="searchSubmit">
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <i>&#128269;</i>
                 </button>
               </form>
               <div class="explore-buttons">
                 <button id="all-list" class="filter-btn active">All</button>
                 <button id="by-rating" class="filter-btn">
-                  <span>By Rating</span> <i class="fa-solid fa-star"></i>
+                  <span>By Rating</span> <i>&#9733;</i>
                 </button>
                 <button id="by-city" class="filter-btn">
-                  <span>By City</span> <i class="fa-solid fa-city"></i>
+                  <span>By City</span> <i>&#128204;</i>
                 </button>
               </div>
             </div>

@@ -17,7 +17,7 @@ class HeroSection extends HTMLElement {
                "Makanan adalah segalanya bagi kita. Ini merupakan perpanjangan dari perasaan nasionalis, perasaan etnis, sejarah pribadimu, provinsimu, daerahmu, sukumu, nenekmu. Itu tidak dapat dipisahkan sejak awal." - Anthony Bourdain
             </p>
             <button id="cat">
-              Find Now <i class="fa-solid fa-arrow-right"></i>
+              Find Now <i>&#8722;&#62;</i>
             </button>
           </div>
         </div>
