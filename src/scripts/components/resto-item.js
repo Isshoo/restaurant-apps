@@ -33,7 +33,7 @@ class RestoItem extends HTMLElement {
     this.innerHTML += `
          <article class="resto-card">
               <div class="resto-img">
-                <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL + this.resto.pictureId}" alt="gambar restaurant ${this.resto.name}" />
+                <img class="lazyload" data-src="${CONFIG.SMALL_IMAGE_URL + this.resto.pictureId}" alt="gambar restaurant ${this.resto.name}" />
               </div>
 
               <div class="resto-info">

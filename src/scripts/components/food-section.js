@@ -16,23 +16,58 @@ class FoodSection extends HTMLElement {
         </div>
         <div class="food-content">
           <article class="food-item">
-            <img class="lazyload" data-src="./images/food/lalapan.jpg" alt="Lalapan" />
+            <picture>
+              <source media="(max-width: 600px)" class="lazyload" data-srcset="./images/lalapan-small.jpg">
+              <img
+                class="lazyload"
+                data-src='./images/lalapan-large.jpg' 
+                alt="Lalapan"
+              >
+              </picture>
             <h3>Lalapan</h3>
           </article>
           <article class="food-item">
-            <img class="lazyload" data-src="./images/food/martabak.jpg" alt="Martabak" />
+            <picture>
+              <source media="(max-width: 600px)" class="lazyload" data-srcset="./images/martabak-small.jpg">
+              <img
+                class="lazyload"
+                data-src='./images/martabak-large.jpg' 
+                alt="Martabak"
+              >
+              </picture>
             <h3>Martabak</h3>
           </article>
           <article class="food-item">
-            <img class="lazyload" data-src="./images/food/mie-ceplok.jpg" alt="Mie Ceplok" />
+            <picture>
+              <source media="(max-width: 600px)" class="lazyload" data-srcset="./images/mie-ceplok-small.jpg">
+              <img
+                class="lazyload"
+                data-src='./images/mie-ceplok-large.jpg' 
+                alt="Mie Ceplok"
+              >
+              </picture>
             <h3>Mie Ceplok</h3>
           </article>
           <article class="food-item">
-            <img class="lazyload" data-src="./images/food/nasi-campur.jpg" alt="Nasi Campur" />
+            <picture>
+              <source media="(max-width: 600px)" class="lazyload" data-srcset="./images/nasi-campur-small.jpg">
+              <img
+                class="lazyload"
+                data-src='./images/nasi-campur-large.jpg' 
+                alt="Nasi Campur"
+              >
+              </picture>
             <h3>Nasi Campur</h3>
           </article>
           <article class="food-item">
-            <img class="lazyload" data-src="./images/food/sate.jpg" alt="Sate" />
+            <picture>
+              <source media="(max-width: 600px)" class="lazyload" data-srcset="./images/sate-small.jpg">
+              <img
+                class="lazyload"
+                data-src='./images/sate-large.jpg' 
+                alt="Sate"
+              >
+              </picture>
             <h3>Sate</h3>
           </article>
         </div>

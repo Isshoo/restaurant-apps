@@ -4,7 +4,18 @@ import Loading from '../../utility/loading';
 const Home = {
   async render() {
     return `
-      <section id="home"><hero-section></hero-section></section>
+      <section id="home">
+        <picture>
+          <source 
+            media="(max-width: 600px)" 
+            srcset="./images/hero-image_2-small.jpg">
+          <img
+            src='./images/hero-image_2-large.jpg' 
+            alt="Hero Image"
+          >
+        </picture>
+        <hero-section></hero-section>
+      </section>
       <section id="explore">
         <explore-section></explore-section>
       </section>
