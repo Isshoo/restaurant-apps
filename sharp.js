@@ -11,6 +11,8 @@ if (!fs.existsSync(destination)) {
 
 fs.readdirSync(target)
   .forEach((image) => {
+    // Mengabaikan file .DS_Store
+    if (image === '.DS_Store') return;
     // mengubah ukuran gambar dengan lebar 800px, dengan prefix -large.jpg
     sharp(`${target}/${image}`)
       .resize(800)
