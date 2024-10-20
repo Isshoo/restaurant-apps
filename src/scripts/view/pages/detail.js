@@ -3,17 +3,26 @@ import RestoDbSource from '../../datas/resto-api';
 import LikeButtonPresenter from '../../utility/like-button-presenter';
 import Utils from '../../utility/utils';
 import FavoriteRestoIdb from '../../datas/favorite-resto-idb';
+import Loading from '../../utility/loading';
 
 const Detail = {
   async render() {
     return `
     <section id="detailContainer">
      <div id="restoDetail">
-      <div id="resto" class="resto"></div>
-      <div id="menus" class="menus"></div>
+      <div id="resto" class="resto">
+        <skltn-detail></skltn-detail>
+      </div>
+      <div id="menus" class="menus">
+        <skltn-menus></skltn-menus>
+      </div>
       <div id="reviewContainer">
        <form-review></form-review>
-       <div id="reviews" class="reviews"></div>
+       <div id="reviews" class="reviews">
+        <skltn-reviews></skltn-reviews>
+        <skltn-reviews></skltn-reviews>
+        <skltn-reviews></skltn-reviews>
+       </div>
       </div>
       <div id="likeButtonContainer"></div>
      </div>
@@ -33,24 +42,26 @@ const Detail = {
     const reviewsContainer = document.querySelector('#reviews');
     const formContainer = document.querySelector('form-review');
 
-    const renderDetail = (restos) => {
+    const renderDetail = async (restos) => {
       const restoItem = document.createElement('resto-detail');
       restoItem.restow = restos;
 
+      await Loading.delay();
       restoContainer.innerHTML = '';
       restoContainer.append(restoItem);
     };
 
-    const renderMenus = (restos) => {
+    const renderMenus = async (restos) => {
       const restoItem = document.createElement('resto-menus');
       restoItem.restow = restos;
 
+      await Loading.delay();
       menusContainer.innerHTML = '';
       menusContainer.append(restoItem);
       formContainer.style.display = 'block';
     };
 
-    const renderReviews = (restos) => {
+    const renderReviews = async (restos) => {
       const restoList = restos.map((resto) => {
         const restoItem = document.createElement('resto-reviews');
         restoItem.restow = resto;
@@ -68,6 +79,7 @@ const Detail = {
         return dateB - dateA;
       });
 
+      await Loading.delay();
       reviewsContainer.innerHTML = '';
       reviewsContainer.append(...restoNewest);
     };

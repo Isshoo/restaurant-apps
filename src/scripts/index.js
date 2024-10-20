@@ -13,6 +13,10 @@ import './components/resto-menus';
 import './components/resto-reviews';
 import './components/form-review';
 import './components/res-loading';
+import './components/skltn-item';
+import './components/skltn-detail';
+import './components/skltn-menus';
+import './components/skltn-reviews';
 import './utility/navbar-tambahan';
 
 import App from './view/app';

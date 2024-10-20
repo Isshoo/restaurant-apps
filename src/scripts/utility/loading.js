@@ -3,7 +3,7 @@ class Loading {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(response);
-      }, 400);
+      }, 2000);
     });
   }
 

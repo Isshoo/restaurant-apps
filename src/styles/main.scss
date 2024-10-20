@@ -1,7 +1,7 @@
 /* main color */
 $yellow: #ff9e1b;
 $red: #da281c;
-$cream: #fff2e2;
+$cream: #eeeeeeca;
 $black: rgb(23, 27, 30);
 
 /* === base === */
@@ -49,6 +49,25 @@ img {
 
 i {
   color: white;
+}
+
+explore-section, 
+favorite-section,
+#resto,
+resto-detail,
+.detail-card,
+resto-reviews,
+form-review,
+#restoDetail {
+  width: 100%;
+}
+
+.skltn, *.skltn {
+  animation: skltn 1s infinite linear;  
+  color: transparent;
+  user-select: none;
+  background-color: $cream;
+  display: inline-block;
 }
 
 /* === base === */
@@ -370,10 +389,6 @@ main {
 
   /* Home section */
 
-  explore-section, favorite-section, #restoDetail {
-    width: 100%;
-  }
-
   #explore {
     min-height: 728px;
     display: flex;
@@ -530,6 +545,13 @@ main {
                 transition: transform 0.5s ease-in-out;
               }
             }
+
+            div.skltn {
+              width: 100%;
+              height: 13rem;
+              object-fit: cover;
+              object-position: center;
+            }
           }
 
           .resto-info {
@@ -579,12 +601,28 @@ main {
                   color: red;
                 }
               }
+
+              a.skltn {
+                background-color: $cream;
+                color: transparent;
+
+                &:hover {
+                  color: transparent;
+                }
+                &:active {
+                  color: transparent;
+                }
+              }
             }
             p {
               font-size: 0.95rem;
               color: whitesmoke;
               line-height: 1.4;
               text-align: start;
+            }
+            p.skltn {
+              color: transparent;
+              background-color: $cream;
             }
           }
 
@@ -610,15 +648,26 @@ main {
     }
   }
 
+  #bestfood {
+    min-height: 728px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-block: 6rem;
+  }
+
+  food-section {
+    width: 100%;
+  }
+
   .food-con {
     display: flex;
     align-items: center;
-    min-height: 728px;
     justify-content: center;
     flex-direction: column;
     row-gap: 3rem;
     width: 100%;
-    padding-block: 6rem;
+    padding: 0 8%;
 
     h2 {
       span {
@@ -628,16 +677,16 @@ main {
   }
 
   .food-content {
-    max-width: 1200px;
-    margin-inline: 8%;
     display: flex;
     justify-content: space-evenly;
     gap: 0.1rem;
     background-color: $yellow;
     padding: 0.2rem;
+    width: 100%;
 
     .food-item {
       display: flex;
+      width: 100%;
       justify-content: center;
       align-items: center;
       flex-direction: column;
@@ -720,6 +769,8 @@ main {
 
   .detail-img{
     grid-area: img;
+    width: 100%;
+
     img {
       width: 100%;
       height: 100%;
@@ -727,11 +778,15 @@ main {
       object-position: center;
       border-radius: 10px;
     }
+    img.skltn {
+      opacity: 0;
+    }
   }
 
   .detail-info{
     grid-area: info;
     display: grid;
+    width: 100%;
     grid-template-areas: 
       "cat"
       "add"
@@ -745,6 +800,7 @@ main {
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
+      width: 100%;
       .labels {
         color: $yellow;
         font-size: 0.9rem; 
@@ -916,6 +972,7 @@ form-review {
   background-color: transparent;
   border-radius: 16px;
   height: 100%;
+  width: 100%;
 
   h2 {
     text-align: center;
@@ -934,6 +991,7 @@ form-review {
   flex-direction: column;
   gap: 0.75rem;
   height: 100%;
+  width: 100%;
 
   .desc-con {
     flex: 1;
@@ -983,6 +1041,7 @@ form-review {
 */
 
 #reviews{
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   grid-template-rows: auto;
@@ -990,7 +1049,6 @@ form-review {
   padding: 1.5rem;
   border-top: 1px solid gray;
   border-radius: 16px 0 0 16px;
-  width: 100%;
   max-height: 25rem;
   overflow: auto;
   &::-webkit-scrollbar {
@@ -1016,6 +1074,7 @@ form-review {
       transition: 0.3s ease;
       justify-content: space-between;
       width: 100%;
+      height: 100%;
       overflow: auto;
       border-bottom: 1px solid $yellow;
       padding-block: 0.5rem;

@@ -35,7 +35,11 @@ class FavoriteSection extends HTMLElement {
                 </button>
               </div>
             </div>
-            <div id="resto-list"></div>
+            <div id="resto-list">
+              <skltn-item></skltn-item>
+              <skltn-item></skltn-item>
+              <skltn-item></skltn-item>
+            </div>
           </div>
           `;
   }

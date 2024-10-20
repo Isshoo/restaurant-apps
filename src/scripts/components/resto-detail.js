@@ -38,7 +38,7 @@ class RestoDetail extends HTMLElement {
                <h2>${this.resto.name}</h2>
               </div>
               <div class="detail-img">
-                <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL + this.resto.pictureId}" alt="gambar restaurant ${this.resto.name}" />
+                <img class="lazyload" data-src="${CONFIG.MEDIUM_IMAGE_URL + this.resto.pictureId}" alt="gambar restaurant ${this.resto.name}" />
               </div>
 
               <div class="detail-info">

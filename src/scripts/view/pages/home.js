@@ -1,5 +1,5 @@
 import RestoDbSource from '../../datas/resto-api';
-// import Loading from '../../utility/loading';
+import Loading from '../../utility/loading';
 
 const Home = {
   async render() {
@@ -22,7 +22,7 @@ const Home = {
       <section id="explore">
         <explore-section></explore-section>
       </section>
-      <section id="food">
+      <section id="bestfood">
         <food-section></food-section>
       </section>
     `;
@@ -44,7 +44,7 @@ const Home = {
         restoItem.restow = resto;
         return restoItem;
       });
-      // await Loading.restoList();
+      await Loading.delay();
       restoContainer.innerHTML = '';
       restoContainer.append(...restoList);
 
