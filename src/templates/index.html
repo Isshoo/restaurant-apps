@@ -14,7 +14,7 @@
 
     <script>
       const currentPath = window.location.hash;
-      if (currentPath === '#/' || currentPath === '#/home') {
+      if (currentPath === '' || currentPath === '#/home') {
         if (window.innerWidth > 600) {
           const link = document.createElement('link');
           link.rel = 'preload';
