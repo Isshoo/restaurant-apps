@@ -34,10 +34,10 @@ class HeaderBar extends HTMLElement {
               <a href="https://www.facebook.com/algi.ngenget/">
                 <figure>
                   <picture>
-                    <source media="(max-width: 600px)" class="lazyload" data-srcset="./images/hero-image1-small.jpg">
+                    <source fetchpriority="high"  media="(max-width: 600px)" srcset="./images/hero-image1-small.jpg">
                     <img
-                      class="lazyload"
-                      data-src='./images/hero-image1-large.jpg' 
+                      fetchpriority="high" 
+                      src='./images/hero-image1-large.jpg' 
                       alt="Profile Picture"
                     >
                   </picture>

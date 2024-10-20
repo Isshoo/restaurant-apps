@@ -9,6 +9,8 @@ const ImageminPngquant = require('imagemin-pngquant');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 
 require('dotenv').config({
   path: path.resolve('.env'),
@@ -73,6 +75,8 @@ module.exports = {
     },
   },
 
+  stats: 'verbose',
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(process.env),
@@ -99,7 +103,7 @@ module.exports = {
     }),
 
     new ImageminWebpackPlugin({
-      test: /\.(jpe?g|png)/,
+      test: /\.(jpe?g|png)/i,
       plugins: [
         ImageminMozjpeg({
           quality: 50,
@@ -110,6 +114,12 @@ module.exports = {
         }),
       ],
     }),
+
+    new CompressionPlugin({
+      algorithm: 'gzip',
+    }),
+
+    new BrotliPlugin(),
 
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',

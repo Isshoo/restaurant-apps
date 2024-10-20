@@ -7,9 +7,12 @@ const Home = {
       <section id="home">
         <picture>
           <source 
+            type="image/jpeg"
             media="(max-width: 600px)" 
+            fetchpriority="high" 
             srcset="./images/hero-image2-small.jpg">
           <img
+            fetchpriority="high" 
             src='./images/hero-image2-large.jpg' 
             alt="Hero Image"
           >

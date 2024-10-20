@@ -58,6 +58,8 @@
     "workbox-webpack-plugin": "^7.1.0"
   },
   "dependencies": {
+    "brotli-webpack-plugin": "^1.1.0",
+    "compression-webpack-plugin": "^11.1.0",
     "dotenv": "^16.4.5",
     "idb": "^8.0.0",
     "lazysizes": "^5.3.2",

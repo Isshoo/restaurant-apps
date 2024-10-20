@@ -645,7 +645,7 @@ main {
       filter: grayscale(80%);
 
       &:hover {
-        flex: 20;
+        flex: 10;
         transition: flex-grow 0.5s ease-in-out, filter 0.5s ease-in-out;
         filter: grayscale(0%);
 
