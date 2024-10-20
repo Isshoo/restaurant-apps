@@ -370,6 +370,10 @@ main {
 
   /* Home section */
 
+  explore-section, favorite-section, #restoDetail {
+    width: 100%;
+  }
+
   #explore {
     min-height: 728px;
     display: flex;
@@ -495,7 +499,6 @@ main {
       #resto-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-
         gap: 1.5rem;
 
         .resto-card {
