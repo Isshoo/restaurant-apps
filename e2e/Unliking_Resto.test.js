@@ -5,6 +5,7 @@ Feature('Unliking Resto');
 
 Before(({ I }) => {
   I.amOnPage('/#/favorite');
+  I.wait(2);
 });
 
 Scenario('showing empty liked resto', ({ I }) => {
@@ -15,6 +16,7 @@ Scenario('liking one resto and then unlike that resto', async ({ I }) => {
   I.see('Tidak ada restoran yang disimpan sebagai favorit.', '#resto-list');
 
   I.amOnPage('/');
+  I.wait(2);
 
   I.waitForElement('.resto-info h3 a', 10);
   I.seeElement('.resto-info h3 a');
@@ -30,6 +32,7 @@ Scenario('liking one resto and then unlike that resto', async ({ I }) => {
   I.click('.swal2-confirm');
 
   I.amOnPage('/#/favorite');
+  I.wait(2);
   I.waitForElement('.resto-card', 10);
   I.seeElement('.resto-card');
   const likedRestoTitle = await I.grabTextFrom('.resto-info h3');
@@ -48,5 +51,6 @@ Scenario('liking one resto and then unlike that resto', async ({ I }) => {
   I.click('.swal2-confirm');
 
   I.amOnPage('/#/favorite');
+  I.wait(1);
   I.see('Tidak ada restoran yang disimpan sebagai favorit.', '#resto-list');
 });

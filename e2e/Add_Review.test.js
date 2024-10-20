@@ -5,20 +5,24 @@ Feature('Add a review');
 
 Scenario('adding one new review', async ({ I }) => {
   I.amOnPage('/');
+  I.wait(2);
 
   I.waitForElement('.resto-info h3 a', 20);
   I.seeElement('.resto-info h3 a');
   const firstResto = locate('.resto-info h3 a').first();
   I.click(firstResto);
+  I.wait(2);
 
   I.waitForElement('#reviewForm', 20);
+  I.wait(2);
   I.seeElement('#reviewForm .name-con #name');
   I.click('#reviewForm .name-con #name');
   I.clearField('#reviewForm .name-con #name');
-  I.wait(1);
+  I.wait(2);
   I.fillField('#reviewForm .name-con #name', 'John Doe');
 
   I.seeElement('#reviewForm .desc-con #description');
+  I.wait(2);
   I.click('#reviewForm .desc-con #description');
   I.clearField('#reviewForm .desc-con #description');
   I.fillField('#reviewForm .desc-con #description', 'The Foods are Recommended!');
@@ -29,6 +33,7 @@ Scenario('adding one new review', async ({ I }) => {
   I.waitForElement('.swal2-container', 20);
   I.seeElement('.swal2-container');
   I.click('.swal2-confirm');
+  I.wait(2);
 
   I.waitForElement('.review-item', 20);
   I.seeElement('.review-item');
