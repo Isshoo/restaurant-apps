@@ -10,8 +10,21 @@
     <meta name="theme-color" content="#da281c"/>
     <link rel="apple-touch-icon" href="./icons/restaurant-192.png">
     <link rel="manifest" href="./app.webmanifest">
-    <link rel="preload" href="./images/hero-image2-large.jpg" as="image" />
-    <link rel="preload" href="./images/hero-image2-small.jpg" as="image" />
+    <script>
+      if (window.innerWidth > 600) {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = './images/hero-image2-large.jpg';
+        link.as = 'image';
+        document.head.appendChild(link);
+      } else {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = './images/hero-image2-small.jpg';
+        link.as = 'image';
+        document.head.appendChild(link);
+      }
+    </script>
 
     <title>Eat Lah Cuy</title>
     <link rel="icon" type="image/png" href="./favicon.png" sizes="512x512" />
