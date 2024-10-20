@@ -26,6 +26,7 @@ module.exports = merge(common, {
       swDest: './sw.bundle.js',
       clientsClaim: true,
       skipWaiting: true,
+      exclude: [/\.DS_Store$/, /\.DS_Store\.br$/, /\.DS_Store\.gz$/],
       runtimeCaching: [
         {
           urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev'),
