@@ -1,5 +1,5 @@
 import RestoDbSource from '../../datas/resto-api';
-import Loading from '../../utility/loading';
+// import Loading from '../../utility/loading';
 
 const Home = {
   async render() {
@@ -44,7 +44,7 @@ const Home = {
         restoItem.restow = resto;
         return restoItem;
       });
-      await Loading.restoList();
+      // await Loading.restoList();
       restoContainer.innerHTML = '';
       restoContainer.append(...restoList);
 

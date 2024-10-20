@@ -1,5 +1,5 @@
 import FavoriteRestoIdb from '../../datas/favorite-resto-idb';
-import Loading from '../../utility/loading';
+// import Loading from '../../utility/loading';
 
 const Favorite = {
   async render() {
@@ -21,7 +21,7 @@ const Favorite = {
         restoItem.restow = resto;
         return restoItem;
       });
-      await Loading.restoList();
+      // await Loading.restoList();
       restoContainer.innerHTML = '';
       restoContainer.append(...restoList);
 

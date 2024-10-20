@@ -1,11 +1,11 @@
 import Swal from 'sweetalert2';
 import API_ENDPOINT from '../globals/api-endpoint';
-import Loading from '../utility/loading';
+// import Loading from '../utility/loading';
 
 class RestoDbSource {
   static async listResto() {
     try {
-      await Loading.restoList();
+      // await Loading.restoList();
       const response = await fetch(API_ENDPOINT.LIST);
       const responseJson = await response.json();
       return responseJson.restaurants;
@@ -21,7 +21,7 @@ class RestoDbSource {
 
   static async getRestaurantDetails(id) {
     try {
-      await Loading.restoDetail();
+      // await Loading.restoDetail();
       const response = await fetch(API_ENDPOINT.DETAIL(id));
       const responseJson = await response.json();
       const { restaurant } = responseJson;
@@ -48,7 +48,7 @@ class RestoDbSource {
 
   static async getRestaurantMenus(id) {
     try {
-      await Loading.restoMenu();
+      // await Loading.restoMenu();
       const response = await fetch(API_ENDPOINT.DETAIL(id));
       const responseJson = await response.json();
       const { restaurant } = responseJson;
@@ -69,7 +69,7 @@ class RestoDbSource {
 
   static async getCustomerReviews(id) {
     try {
-      await Loading.restoReview();
+      // await Loading.restoReview();
       const response = await fetch(API_ENDPOINT.DETAIL(id));
       const responseJson = await response.json();
       const { restaurant } = responseJson;
@@ -88,7 +88,7 @@ class RestoDbSource {
 
   static async searchResto(query) {
     try {
-      await Loading.restoList();
+      // await Loading.restoList();
       const response = await fetch(API_ENDPOINT.SEARCH(query));
       const responseJson = await response.json();
       const { restaurants: restos } = responseJson;
@@ -117,7 +117,7 @@ class RestoDbSource {
           review: review.review,
         }),
       };
-      await Loading.restoReview();
+      // await Loading.restoReview();
       const response = await fetch(API_ENDPOINT.REVIEW, options);
       const responseJson = await response.json();
 
