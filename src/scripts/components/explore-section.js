@@ -39,18 +39,6 @@ class ExploreSection extends HTMLElement {
             <skltn-item></skltn-item>
             <skltn-item></skltn-item>
             <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
-            <skltn-item></skltn-item>
           </div>
         </div>
         `;
