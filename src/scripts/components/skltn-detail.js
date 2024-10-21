@@ -15,7 +15,7 @@ class SkltnDetail extends HTMLElement {
                <h2 class="skltn">Melting Pot</h2>
               </div>
               <div class="detail-img skltn">
-                <img fetchpriority="high" src="./images/sate-small.jpg" alt="" class="skltn"/>
+                <div class="skltn"></div>
               </div>
 
               <div class="detail-info">

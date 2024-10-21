@@ -780,6 +780,23 @@ main {
     }
   }
 
+  .detail-img.skltn {
+    width: 100%;
+    height: 100%;
+
+    div.skltn {
+      min-width: 346.1px;
+      min-height: 231.5px;
+      width: 100%;
+      height: 100%;
+      max-width: 319.7px;
+      max-height: 374.4px;
+      background-color: $cream;
+      border-radius: 10px;
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+
   .detail-info{
     grid-area: info;
     display: grid;
