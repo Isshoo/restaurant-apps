@@ -33,14 +33,7 @@ class HeaderBar extends HTMLElement {
             <div class="user-account">
               <a href="https://www.facebook.com/algi.ngenget/">
                 <figure>
-                  <picture>
-                    <img
-                      fetchpriority="high" 
-                      src='./images/hero-image1-small.jpg' 
-                      alt="Profile Picture"
-                    >
-                  </picture>
-                </figure>
+                  
                 <figcaption>Isshoo</figcaption>
               </a>
             </div>
