@@ -22,6 +22,7 @@ const Detail = {
         <skltn-reviews></skltn-reviews>
         <skltn-reviews></skltn-reviews>
         <skltn-reviews></skltn-reviews>
+        <skltn-reviews></skltn-reviews>
        </div>
       </div>
       <div id="likeButtonContainer"></div>

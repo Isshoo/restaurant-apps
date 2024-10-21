@@ -28,9 +28,6 @@ Scenario('liking one resto', async ({ I }) => {
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.seeElement('.swal2-container');
-  I.click('.swal2-confirm');
-
   I.amOnPage('/#/favorite');
   I.wait(2);
   I.waitForElement('.resto-card', 10);

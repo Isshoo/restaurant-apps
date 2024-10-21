@@ -28,9 +28,6 @@ Scenario('liking one resto and then unlike that resto', async ({ I }) => {
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.seeElement('.swal2-container');
-  I.click('.swal2-confirm');
-
   I.amOnPage('/#/favorite');
   I.wait(2);
   I.waitForElement('.resto-card', 10);
@@ -46,9 +43,6 @@ Scenario('liking one resto and then unlike that resto', async ({ I }) => {
   I.waitForElement('#likedButton', 10);
   I.seeElement('#likedButton');
   I.click('#likedButton');
-
-  I.seeElement('.swal2-container');
-  I.click('.swal2-confirm');
 
   I.amOnPage('/#/favorite');
   I.wait(1);

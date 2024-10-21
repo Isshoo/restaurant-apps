@@ -1046,7 +1046,7 @@ form-review {
   padding: 1.5rem;
   border-top: 1px solid gray;
   border-radius: 16px 0 0 16px;
-  max-height: 25rem;
+  height: 25rem;
   overflow: auto;
   &::-webkit-scrollbar {
     width: 2px;
@@ -1071,7 +1071,7 @@ form-review {
       transition: 0.3s ease;
       justify-content: space-between;
       width: 100%;
-      height: 100%;
+      height: 140px;
       overflow: auto;
       border-bottom: 1px solid $yellow;
       padding-block: 0.5rem;
@@ -1103,6 +1103,12 @@ form-review {
           color: rgb(203, 203, 203);
         }
       }
+    }
+    .review-item.skltn {
+      color: transparent;
+      background-color: $cream;
+      height: 140px;
+      width: 100%;
     }
   }
 }

@@ -43,7 +43,7 @@ class Loading {
 
   static async restoReview() {
     const reviewContainer = document.querySelector('#reviews');
-    const loadingElement = document.createElement('res-loading');
+    const loadingElement = document.createElement('skltn-reviews');
 
     reviewContainer.innerHTML = '';
     reviewContainer.append(loadingElement);

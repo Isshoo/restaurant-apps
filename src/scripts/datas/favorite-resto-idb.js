@@ -1,6 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable consistent-return */
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';
 
@@ -20,11 +20,11 @@ const FavoriteRestoIdb = {
       }
       return (await dbPromise).get(OBJECT_STORE_NAME, id);
     } catch {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Gagal mendapatkan restoran!',
-      });
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Oops...',
+      //   text: 'Gagal mendapatkan restoran!',
+      // });
       return console.log('Gagal mendapatkan restoran!');
     }
   },
@@ -32,11 +32,11 @@ const FavoriteRestoIdb = {
     try {
       return (await dbPromise).getAll(OBJECT_STORE_NAME);
     } catch {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Gagal mendapatkan list restoran!',
-      });
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Oops...',
+      //   text: 'Gagal mendapatkan list restoran!',
+      // });
       return console.log('Gagal mendapatkan list restoran!');
     }
   },
@@ -45,35 +45,35 @@ const FavoriteRestoIdb = {
       if (!resto.hasOwnProperty('id')) {
         return;
       }
-      Swal.fire({
-        title: 'Success',
-        icon: 'success',
-        text: 'Restaurant ditambahkan ke daftar favorit!',
-      });
+      // Swal.fire({
+      //   title: 'Success',
+      //   icon: 'success',
+      //   text: 'Restaurant ditambahkan ke daftar favorit!',
+      // });
       return (await dbPromise).put(OBJECT_STORE_NAME, resto);
     } catch {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Gagal menambahkan restoran ke daftar favorit!',
-      });
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Oops...',
+      //   text: 'Gagal menambahkan restoran ke daftar favorit!',
+      // });
       return console.log('Gagal menambahkan restoran ke daftar favorit!');
     }
   },
   async deleteResto(id) {
     try {
-      Swal.fire({
-        title: 'Success',
-        icon: 'success',
-        text: 'Restaurant dihapus dari daftar favorit!',
-      });
+      // Swal.fire({
+      //   title: 'Success',
+      //   icon: 'success',
+      //   text: 'Restaurant dihapus dari daftar favorit!',
+      // });
       return (await dbPromise).delete(OBJECT_STORE_NAME, id);
     } catch {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Gagal menghapus restoran dari daftar favorit!',
-      });
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Oops...',
+      //   text: 'Gagal menghapus restoran dari daftar favorit!',
+      // });
       return console.log('Gagal menghapus restoran dari daftar favorit!');
     }
   },

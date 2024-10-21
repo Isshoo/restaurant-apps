@@ -29,10 +29,6 @@ Scenario('adding one new review', async ({ I }) => {
 
   I.seeElement('#reviewForm #reviewSubmit');
   I.click('#reviewForm #reviewSubmit');
-
-  I.waitForElement('.swal2-container', 20);
-  I.seeElement('.swal2-container');
-  I.click('.swal2-confirm');
   I.wait(2);
 
   I.waitForElement('.review-item', 20);
