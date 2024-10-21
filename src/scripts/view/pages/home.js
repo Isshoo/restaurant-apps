@@ -7,6 +7,10 @@ const Home = {
       <section id="home">
         <picture>
           <source 
+            type="image/webp"
+            fetchpriority="high" 
+            srcset="./images/hero-image2.webp">
+          <source 
             type="image/jpeg"
             media="(max-width: 600px)" 
             fetchpriority="high" 

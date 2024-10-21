@@ -3,9 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-const ImageminMozjpeg = require('imagemin-mozjpeg');
-const ImageminPngquant = require('imagemin-pngquant');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -100,7 +98,6 @@ module.exports = {
           globOptions: {
           // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
             ignore: [
-              '**/images/**',
               '**/.*DS_Store',
             ],
           },
@@ -114,17 +111,16 @@ module.exports = {
 
     new CriticalCssPlugin(),
 
-    new ImageminWebpackPlugin({
-      test: /\.(jpe?g|png)/i,
-      plugins: [
-        ImageminMozjpeg({
-          quality: 50,
-          progressive: true,
-        }),
-        ImageminPngquant({
-          quality: [0.5, 0.6],
-        }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 50,
+          },
+        },
       ],
+      overrideExtension: true,
     }),
 
     new CompressionPlugin({
