@@ -12,6 +12,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CriticalCssPlugin = require('critical-css-webpack-plugin');
 
 require('dotenv').config({
   path: path.resolve('.env'),
@@ -50,6 +51,7 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
+      '...',
       new CssMinimizerPlugin(),
       new TerserPlugin(),
     ],
@@ -109,6 +111,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].bundle.css',
     }),
+
+    new CriticalCssPlugin(),
 
     new ImageminWebpackPlugin({
       test: /\.(jpe?g|png)/i,
