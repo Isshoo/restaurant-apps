@@ -12,22 +12,15 @@
     <link rel="manifest" href="./app.webmanifest">
     <link rel="preconnect" href="https://restaurant-api.dicoding.dev" />
 
+
     <script>
       const currentPath = window.location.hash;
       if (currentPath === '' || currentPath === '#/home') {
-        if (window.innerWidth > 600) {
           const link = document.createElement('link');
           link.rel = 'preload';
-          link.href = './images/hero-image2-large.jpg';
+          link.href = './images/hero-image2.webp';
           link.as = 'image';
           document.head.appendChild(link);
-        } else {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.href = './images/hero-image2-small.jpg';
-          link.as = 'image';
-          document.head.appendChild(link);
-        }
       }
     </script>
 
