@@ -36,9 +36,7 @@ class FavoriteSection extends HTMLElement {
               </div>
             </div>
             <div id="resto-list">
-              <skltn-item></skltn-item>
-              <skltn-item></skltn-item>
-              <skltn-item></skltn-item>
+              <span class="skltn">Tidak ada restoran yang disimpan sebagai favorit.</span>
             </div>
           </div>
           `;
