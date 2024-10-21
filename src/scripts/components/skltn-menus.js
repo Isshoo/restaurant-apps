@@ -21,11 +21,17 @@ class SkltnMenus extends HTMLElement {
                   <p class="skltn">makanan</p>
                   <p class="skltn">makanan</p>
                   <p class="skltn">makanan</p>
+                  <p class="skltn">makanan</p>
+                  <p class="skltn">makanan</p>
+                  <p class="skltn">makanan</p>
                  </section>
                 </div>
                 <div id="drink" class="menusOpt">
                 <h3>Drinks</h3>
                  <section id="drinksList" class="menuList">
+                  <p class="skltn">minuman</p>
+                  <p class="skltn">minuman</p>
+                  <p class="skltn">minuman</p>
                   <p class="skltn">minuman</p>
                   <p class="skltn">minuman</p>
                   <p class="skltn">minuman</p>
