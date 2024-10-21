@@ -32,8 +32,6 @@ class HeaderBar extends HTMLElement {
           <div class="nav-extra">
             <div class="user-account">
               <a href="https://www.facebook.com/algi.ngenget/">
-                <figure>
-                  
                 <figcaption>Isshoo</figcaption>
               </a>
             </div>

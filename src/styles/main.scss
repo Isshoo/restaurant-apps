@@ -224,19 +224,16 @@ header {
             justify-content: center;
             flex-direction: column;
             gap: 0.1rem;
-            figure {
-              img {
-                width: 2rem;
-                height: 2rem;
-                border-radius: 100%;
-                object-fit: cover;
-              }
-            }
 
             figcaption {
+              display: inline-block;
               font-size: 0.8rem;
+              border: 1px solid $red;
+              border-radius: 10px;
+              padding: 0.5rem;
 
               &:hover {
+                border-color: white;
                 color: $red;
               }
             }
