@@ -106,24 +106,18 @@ header {
   background-color: transparent;
   z-index: 999;
 
-
   .navbar-con {
     width: 100%;
     background-color: transparent;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     padding-block: 0.8rem;
-    max-width: 1000px;
-    margin-inline: auto;
-    height: 71.59px;
 
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 0 8%;
-      width: 100%;
-      height: 46px;
 
       .nav-title {
         display: flex;
@@ -275,8 +269,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1000px;
-  margin-inline: auto;
   width: 100%;
   flex: 1;
   /* Home section */
@@ -1223,13 +1215,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
-  margin-inline: auto;
-  height: 65px;
 
   .footerbar {
     padding-block: 1.5rem;
-    height: 65px;
 
     p {
       font-size: 0.9rem;
