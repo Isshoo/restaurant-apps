@@ -13,7 +13,7 @@ Scenario('adding one new review', async ({ I }) => {
   I.click(firstResto);
   I.wait(2);
 
-  I.waitForElement('#reviewForm', 20);
+  I.waitForElement('form-review #reviewForm', 20);
   I.wait(2);
   I.seeElement('#reviewForm .name-con #name');
   I.click('#reviewForm .name-con #name');
