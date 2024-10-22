@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js && node sharp .js",
+    "build": "webpack --config webpack.prod.js && node sharp.js",
     "build-image": "node sharp.js",
     "serve": "http-server dist --port 8000",
     "build-serve": "npm run build && npm run serve",
