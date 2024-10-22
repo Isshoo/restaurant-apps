@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" href="./favicon.png" sizes="512x512" />
   </head>
   <body>
-    <a href="#mainContent" class="skip-link">Menuju ke konten</a>
+    <button id="skip-link">Menuju ke konten</button>
 
     <header>
       <header-bar></header-bar>
@@ -39,6 +39,16 @@
     <footer>
       <footer-bar></footer-bar>
     </footer>
+
+    <script>
+      const skip = document.querySelector('#skip-link');
+      const main = document.querySelector('#mainContent');
+
+      skip.addEventListener('click', () => {
+        main.setAttribute('tabindex', '-1');
+        main.focus();
+      });
+    </script>
     
   </body>
 </html>
