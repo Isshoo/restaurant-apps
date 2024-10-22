@@ -14,6 +14,7 @@ import './components/resto-reviews';
 import './components/form-review';
 import './components/res-loading';
 import './components/skltn-item';
+import './components/skltn-itemm';
 import './components/skltn-detail';
 import './components/skltn-menus';
 import './components/skltn-reviews';
