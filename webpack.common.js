@@ -11,7 +11,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CriticalCssPlugin = require('critical-css-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+// const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 require('dotenv').config({
   path: path.resolve('.env'),
@@ -112,11 +112,11 @@ module.exports = {
 
     new CriticalCssPlugin(),
 
-    new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: ['imagemin-webp'],
-      },
-    }),
+    // new ImageMinimizerPlugin({
+    //   minimizerOptions: {
+    //     plugins: ['imagemin-webp'],
+    //   },
+    // }),
 
     new CompressionPlugin({
       algorithm: 'gzip',
